@@ -1,0 +1,436 @@
+//
+//revo
+//
+@revoIconSearchSize:25px;
+
+.search-result-icon() {
+	display: inline-block;
+	width:@revoIconSearchSize;
+	height:@revoIconSearchSize;
+	//background-color: red !important;
+	margin-right:.25em;
+}
+
+.openedArrow {
+	.bg("img/search-arrow-dw-default.png");
+	&.hover {
+		.bg("img/search-arrow-dw-hover.png");
+	}
+}
+
+.closedArrow {
+	.bg("img/search-arrow-right-default.png");
+	&.hover {
+		.bg("img/search-arrow-right-hover.png");
+	}
+}
+
+.beforeItem {
+	.bg("img/search-quad-default.png");
+	&.hover {
+		.bg("img/search-quad-hover.png");
+	}
+}
+
+.fav {
+	.bg("img/search-star-default.png");
+	&.hover {
+		.bg("img/search-star-hover.png");
+	}
+}
+
+.addToFav {
+	.search-result-icon;
+	.bg("img/search-dot-default.png");
+	&.hover {
+		.bg("img/search-dot-hover.png");
+	}
+}
+
+.TreeHolder {
+
+	@leftMargin:2.75em;
+	@iconPosition:1.25;
+
+	@imageMargin:1em;
+	@textMargin:1.5em;
+	@imageTopPosition:.475em;
+
+	> ul > li > div {
+		padding-left: @textMargin + @imageMargin;
+		background-position: @imageMargin @imageTopPosition;
+	}
+	> ul > li > ul > li > div {
+		padding-left: @textMargin + (@imageMargin * 2);
+		background-position: @imageMargin*2 @imageTopPosition;
+	}
+
+	> ul > li > ul > li > ul > li > div {
+		padding-left: @textMargin + (@imageMargin * 3);
+		background-position: @imageMargin*3 @imageTopPosition;
+	}
+
+	> ul > li > ul > li > ul > li > ul > li > div {
+		padding-left: @textMargin + (@imageMargin * 4);
+		background-position: @imageMargin*4 @imageTopPosition;
+	}
+
+	> ul > li > ul > li > ul > li > ul > li > ul > li > div {
+		padding-left: @textMargin + (@imageMargin * 5);
+		background-position: @imageMargin*5 @imageTopPosition;
+	}
+
+	> ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > div {
+		padding-left: @textMargin + (@imageMargin * 6);
+		background-position: @imageMargin*6 @imageTopPosition;
+	}
+
+	> ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > div {
+		padding-left: @textMargin + (@imageMargin * 7);
+		background-position: @imageMargin*7 @imageTopPosition;
+	}
+	* {
+		font-size: @font-default;
+		
+	}
+
+	ul {
+		list-style-type:none;
+		width:100%;
+		
+		li {
+			//padding:0 0 0 .25em;
+			border-top:1px solid white;
+			&:nth-child(odd) {
+				> div {
+					background-color: @color-1D;
+				}
+			}
+			&:nth-child(even) {
+				> div {
+					background-color: white;
+				}
+			}
+			> div {
+				position: relative;
+				cursor: pointer;
+				overflow: auto;
+				@padding:.5em;
+				padding-top:@padding;
+				padding-bottom:@padding;
+				width:100%;
+				.wrap;
+				display: block;
+				background-position: 1em center;
+				&:hover {
+					background-color: @color-1A;
+					color:white;
+					.openListDoc {
+						background-color: @color-1D;
+						color: @color-1A;
+					}
+				}
+			}
+			
+		}
+	}
+}
+
+
+#MainWorkContent_DIV {
+  //
+	//display: block;
+	//clear: both;
+	//height: auto !important;
+	//padding:@basePadding;
+	//padding-top:0;
+  //
+  margin-bottom: 1em;
+}
+
+
+
+table.TitlesContent_Content {
+	width: 100%;
+	td {
+		//padding: .25em;
+		.t-row {
+			display: table-row;
+			> div {
+				display: table-cell;
+			}
+		}
+	}
+}
+
+.openListDoc {
+	background-color: @color-1A;
+	color:white;
+	right: .5em;
+
+	float: right;
+	display: inline-block;
+	margin-left: 1em;
+	padding: .125em;
+}
+//
+//document
+//
+.document-box {
+	padding:@basePadding 0 @basePadding 0;
+}
+
+.document {
+	padding:@basePadding;
+}
+
+#noteTypeBasedraft {
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	overflow: auto;
+	padding:0;
+}
+
+.noteTypeBasedraft {
+	overflow: auto;
+	margin: auto;
+	background-color: @color-1D;
+	border: 2px solid @color-1A;
+	.wrap;
+	padding: .125em;
+}
+
+#egaf_c31.egafDocument, 
+#egaf_c31.egafDocument .window, 
+#egaf_c31.egafDocument #treeDocumentHolder {
+	overflow: visible !important;
+}
+
+.egafDocumentPrint {
+  font-weight: bold;
+  float: right;
+	background-color: @color-1D;
+	margin: .5em 0;
+	overflow: auto;
+	padding: .5em;
+	color: @color-1B;
+}
+
+.DocumentViewContent_NavigazioneTop,
+.DocumentViewContent_NavigazioneBottom {
+	background-color: @color-1D;
+	margin: .5em 0;
+	overflow: auto;
+	padding: .5em;
+	color: @color-1B;
+  
+  table {
+    float: right;
+  }
+  
+  td span,
+  td strong {
+    display: inline-block;
+    font-size: inherit !important;
+    position: static !important;
+  }
+}
+
+.TitlesContent_NavigazioneTop,
+.TitlesContent_NavigazioneBottom {
+	padding: 0;
+  table {
+    float: right;
+  }
+  td strong {
+    background-color: white;
+    padding: .125em .375em;
+  }
+}
+.TitlesHeader_Td.TitlesColumnHeaderVisible {
+	display: none;
+}
+
+.PopupTitle_left span {
+	font-size: inherit !important;
+	background-color: @color-1D;
+	margin: .5em 0;
+	padding: .5em;
+	color: @color-1A;
+  font-weight: bold;
+}
+#egafDocumentContainer{
+  clear: both;
+}
+#egafDocumentContainer span, 
+.egafd_fulldoc span {
+  font-size: inherit;
+}
+
+// documenti collegati
+@spessoreBordo: 2px;
+.linkedDocsBox {
+  margin-top: 0 !important;
+  max-height: none !important;
+}
+#LinkedDocsTabs{
+  background-color: @color-1D;
+}
+#LinkedDocsTabs-doc_container{
+  border: @spessoreBordo solid @color-1A;
+  background-color: white;
+  max-height: 10em;
+  overflow: auto;
+}
+.LinkedDocsTabsUl {
+  position: relative;
+  top: @spessoreBordo;
+  border-collapse: collapse;
+  content: "";
+  margin: 0;
+  padding: .2em .2em 0;
+}
+.LinkedDocsTabsUl:after {
+  border-collapse: collapse;
+  content: "";
+  clear: both;
+  display: table;
+}
+.LinkedDocsTabsLi, 
+.LinkedDocsTabsLiSelected {
+  border-bottom-width: 0;
+  float: left;
+  list-style: none outside none;
+  margin: 1px .25em 0 0;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  line-height: 1.5em;
+  position: relative;
+  top: 0;
+  white-space: nowrap;
+  border: @spessoreBordo solid @color-1A;
+  background-color: @color-1C;
+}
+.LinkedDocsTabsLiSelected{
+  margin-bottom: -@spessoreBordo;
+  padding-bottom: @spessoreBordo;
+  background-color: white;
+  border-bottom: 0;
+}
+.LinkedDocsTabsLi:hover{
+  cursor: pointer;
+}
+.LinkedDocsTabsDiv{
+  clear: both;
+  padding: .25em;
+}
+div.LinkedDocsTabsNodirittoDiv {
+  text-align: left;
+  border-top: 2px solid @color-1A;
+  margin-top: 0.75em;
+  text-align: center;
+  span.LinkedDocsTabsNodirittoSpan {
+    color: @color-1A;
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    margin-top: -1em;
+    position: relative;
+    top: -1em;
+    padding: 0.5em;
+  }
+  div {
+    text-align: left;
+  }
+}
+
+.egaf-linkedDocsValue {
+	white-space: nowrap;
+	padding: 0.25em 0.125em;
+  * {
+    font-size: initial !important;
+  }
+  div.egaf-linkedDocsValue-icon {
+    float: left;
+    img.icon {
+      height: 0.9em;
+      width: auto;
+      margin-right: 0.25em;
+      border:0;
+    }
+  }
+}
+
+// stilei per help ADR ereditati da sistemare
+@adrHelpMargin: .5em;
+.tbConBordi, .tbConBordi td {
+  .font-normal (black, '1em !important', none);
+  border: 1px solid @color-1A !important;
+  vertical-align: top;
+  vertical-align: text-top;
+  text-align: left;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.trhead td {
+  .font-normal (@color-1A, '1em !important', none);
+  border: 1px solid @color-1A !important;
+  vertical-align: top;
+  vertical-align: text-top;
+  text-align: left;
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: @color-1D;
+}
+.tbSenzaBordi, .tbSenzaBordi td {	
+  .font-normal (black, '1em !important', none);
+  border: 0 !important;
+  vertical-align: top;
+  vertical-align: text-top;
+  text-align: justify;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.adrHelpTitolo {
+  .font-normal (@color-1A, '1.5em !important', none);
+  font-weight: bold;
+  text-align: center;
+  padding-top: @adrHelpMargin;
+  padding-bottom: @adrHelpMargin;
+  margin-top: @adrHelpMargin;
+  margin-bottom: @adrHelpMargin;
+  background-color: @color-1D;
+}
+.adrHelp {
+  .font-normal (black, '1em !important', none);
+  font-weight: normal;
+  text-align: justify;
+  text-indent: 4*@adrHelpMargin;
+  margin: 0;
+  padding: 0;
+}
+td.centrato {
+  text-align: center;
+}
+#elencoHelpMaterieADR{
+  padding: 0;
+  margin: 0;
+}
+#elencoHelpMaterieADR li{
+  .font-normal (@color-1A, 1.5em, none);
+  border: 1px solid @color-1A;
+  display: table;
+  float: left;
+  padding: .25em;
+  background-color: @color-1D;
+  margin-right: .5em;
+  margin-bottom: .5em;
+  cursor: pointer;
+  min-width: 1.25em;
+  text-align: center;
+}
+#infoadr{
+	padding: 5px; 
+}

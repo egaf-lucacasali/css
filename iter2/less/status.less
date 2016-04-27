@@ -1,0 +1,89 @@
+
+.uppercase {
+	text-transform: uppercase;
+}
+.block {
+	display: block;
+}
+.hidden, .hide {
+	display: none !important;
+}
+.right {
+	//float: right;
+}
+.auto {
+	width:auto !important;
+}
+.disabled {
+	opacity: 0.4;
+}
+#overlay {
+	position:fixed;
+	height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 800;
+	background-color: @color-1A;
+	.opacity(0.7);
+	max-width: 100%;
+}
+
+.no-overlay{
+	position:relative;
+	z-index: 801;
+
+}
+
+.wrpl {
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.table,
+.wrp {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrp-fixed {
+	padding-left: 1.25em !important;
+	padding-right: 1.25em !important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.with-vertical-padding {
+	padding-top: @basePadding;
+	padding-bottom: @basePadding;
+}
+.with-padding-bottom {
+	padding-bottom: @basePadding*2;
+}
+
+.with-horizontal-padding {
+	padding-left: @basePadding;
+	padding-right: @basePadding;
+}
+
+.fill {
+	width: 100%;
+}
+
+.big {
+	font-size: 1em !important;
+}
+
+.fix-margin {
+	margin-left: -@basePadding;
+	margin-right: -@basePadding;
+}

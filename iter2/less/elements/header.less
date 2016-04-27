@@ -1,0 +1,707 @@
+#hd-mpa {
+	min-width:70px !important;
+}
+
+#f-iter-menu-sub {
+	padding: .75em;
+}
+
+.mobile-header  {
+	.wrap;
+	padding:0 0 1em 0;
+	.logo {
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+
+	.mobile-menu {
+		padding-top: 2em;
+		padding-bottom: 1em;
+
+		li > * {
+			cursor: pointer;
+		}
+	}
+
+	.mobile-sub-menu {
+		.wrap;
+		width:100%;
+		clear: both;
+		display: block;
+		color: @color-1D;
+		background-color: @color-1A;
+		padding:@basePadding;
+	}
+}
+
+.mobile-sub-menu {
+	
+	overflow: auto;
+
+	.w-1-1 {
+		padding-bottom: 0;
+	}
+
+	.social {
+		a {
+			position: inherit !important;
+			padding-top: .25em !important;
+			height: 32px;
+		}
+	}
+
+	.uppercase {
+		li {
+			padding:.25em 0;
+		}
+	}
+  
+	&.home-1,
+	&.banca-dati-1,
+	&.banca-dati-3 {
+		ul {
+			padding-bottom:2em;
+			&:last-child {
+				padding-bottom:0em;
+			}
+      &.subservizi {
+        padding-left: 1em;
+        padding-bottom: 0 !important;
+      }
+		}
+	}
+
+	&.home-2,
+	&.banca-dati-2 {
+		ul {
+			padding-bottom:0em;
+			b {
+				padding-left:.5em;
+			}
+			a {
+				padding:.125em 0;
+			}
+		}
+	}
+
+	&.banca-dati-2 {
+		a {
+			b {
+				font-weight: normal;
+				// text-transform: capitalize;
+				span {
+					font-weight: bold;
+					// text-transform: uppercase;
+				}
+				background-repeat: no-repeat;
+				background-image: url(img/arrow-right.png);
+				background-position: -16px center;
+				.transition(padding-left 0.25s ease-in-out, background-position 0.25s ease-in-out;);
+			}
+			
+			&.selected {
+        * {
+        color: white;
+        }
+				b {
+					color: white;
+				}
+				.kol { // cds
+					background-color: @egaf_t_k_75;
+				}
+				.zol { // cds-sanzioni
+					background-color: @egaf_t_k_75;
+				}
+				.nol { // cds-commento
+					background-color: @egaf_t_k_75;
+				}
+				.rol { // strade
+					background-color: @egaf_t_2_75;
+				}
+				.tol { // conducenti
+					background-color: @egaf_t_t_75;
+				}
+				.jol { // revisioni
+					background-color: @egaf_t_j_75;
+				}
+				.lol { // adr
+					background-color: @egaf_t_l_75;
+				}
+				.mol { // motorizzazione
+					background-color: @egaf_t_m_75;
+				}
+				.xol { // rifiuti
+					background-color: @egaf_t_x_75;
+				}
+				.aol { // merci
+					background-color: @egaf_t_a_75;
+				}
+				.eol { // passeggeri
+					background-color: @egaf_t_e_75;
+				}
+				.pol { // nautica
+					background-color: @egaf_t_p_75;
+				}
+				.wol { // infortunistica
+					background-color: @egaf_t_1_75;
+				}
+				.uol { // pratiche-veicoli
+					background-color: @egaf_t_u_75;
+				}
+				.yol { // tecnica-veicoli
+					background-color: @egaf_t_u_75;
+				}
+			}
+
+			&.m-no-blind {
+				b {
+					background-position: .5em center;
+					padding-left: 1.75em;
+				}
+			}
+		}
+	}
+	
+	ul {
+		padding-left:0em;
+		padding-right:0em;
+		&:first-child {
+			li {
+				//padding:.25em 0;
+			}
+		}
+
+		&:last-child {
+			
+			margin-bottom:0;
+		}
+		li {
+      .font-normal (@color-1A, 1em, none);
+			list-style-type: none;
+			
+			a {
+				b {
+					.font-bold (@color-1C, 1em, none);
+					.transition(color 0.25s ease-in-out);
+					span {
+						font-weight: normal;
+						padding-right: .25em;
+						text-transform: capitalize;
+					}
+				}
+				display: inline-block;
+				> * {
+					
+					display: table-cell;
+					vertical-align: middle;
+				}
+				
+				color: @color-1C;
+				&.selected,
+        &:hover {
+					color: white;
+					b {
+						color: white;
+						span {
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.icon-tematica,
+	.icon-iter {
+		@size: 16px;
+		width: @size;
+		height: @size;
+		.shadow(0px 0px 4px 2px @color-1C);
+		// background-color: @color-1A;
+	}
+}
+
+.m-no-blind {
+	padding-left: 1.5em;
+	margin-top: -1em;
+}
+
+.bg-iter-icon(@image) {
+	background-image: url('img/icon-@{image}');
+}
+
+.mobile-sub-menu {
+	.icon-iter,
+	.iter-icon {
+		background-image: none !important;
+	}
+}
+
+.iter-menu-sub,
+.iter-menu-sub-doc {
+	padding: @basePadding;
+	background-color: white;
+	width:100%;
+	margin-top: @basePadding;
+	margin-bottom: @basePadding;
+	
+	.wrap;
+	color: @color-1A;
+}
+
+.social-user {
+	width:100%;
+ 	min-height: 1.5em;
+ 	.user {
+ 		.text-overflow();
+ 		max-width: 260px;
+ 		div {
+ 			.text-overflow();
+ 		}
+ 	}
+}
+div.main div.upper-menu table.social-user {
+	.shadow(4px 4px 10px rgba(0, 0, 0, 0.55));
+}
+
+.menu-tematica {
+	//overflow: auto;
+	table {
+		width: 100%;
+		td:first-child {
+			a {
+				border-left: 0;
+			}
+		}
+
+		a {
+			display: block;
+			padding: .125em .25em;
+			background-color: @color-1A;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: white;
+			text-align: center;
+			//font-size: 80%;
+			border-left:1px solid white;
+
+			.set-menu-tematica-button(egaf_t_all_, @egaf_t_all_100, @egaf_t_all_75);
+			.set-menu-tematica-button(egaf_t_k_,   @egaf_t_k_100, @egaf_t_k_75);
+			.set-menu-tematica-button(egaf_t_m_,   @egaf_t_m_100, @egaf_t_m_75);
+			.set-menu-tematica-button(egaf_t_u_,   @egaf_t_u_100, @egaf_t_u_75);
+			.set-menu-tematica-button(egaf_t_j_,   @egaf_t_j_100, @egaf_t_j_75);
+			.set-menu-tematica-button(egaf_t_t_,   @egaf_t_t_100, @egaf_t_t_75);
+			.set-menu-tematica-button(egaf_t_3_,   @egaf_t_3_100, @egaf_t_3_75);
+			.set-menu-tematica-button(egaf_t_a_,   @egaf_t_a_100, @egaf_t_a_75);
+			.set-menu-tematica-button(egaf_t_e_,   @egaf_t_e_100, @egaf_t_e_75);
+			.set-menu-tematica-button(egaf_t_l_,   @egaf_t_l_100, @egaf_t_l_75);
+			.set-menu-tematica-button(egaf_t_x_,   @egaf_t_x_100, @egaf_t_x_75);
+			.set-menu-tematica-button(egaf_t_2_,   @egaf_t_2_100, @egaf_t_2_75);
+			.set-menu-tematica-button(egaf_t_1_,   @egaf_t_1_100, @egaf_t_1_75);
+			.set-menu-tematica-button(egaf_t_p_,   @egaf_t_p_100, @egaf_t_p_75);
+		}
+	}
+}
+.bb {
+	border-bottom: 1px solid white;
+}
+.nbl {
+	border-left: 0;
+}
+#menu-tematica, .menu-tematica{
+	overflow: visible;
+}
+#menu-tematica table{
+	.shadow(4px 4px 10px rgba(0, 0, 0, 0.55));
+}
+.set-menu-tematica-button(@class, @backgroundColor, @backgroundColorHover) {
+	&.@{class}100 {
+		background-color: @backgroundColor;
+  }
+  &.@{class}100,&.@{class}25 {
+		&:hover {
+			background-color: @backgroundColorHover;
+      cursor: pointer;
+		}
+	}
+}
+
+.icon-iter,
+.iter-icon {
+	
+	background-color: @color-1A;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	
+	&.kol { // cds
+		&.selected {
+			background-color: @egaf_t_k_100;
+		}
+		&:hover {
+			background-color: @egaf_t_k_75;
+		}
+		background-color: @egaf_t_k_25;
+	}
+	&.zol { // cds-sanzioni
+		&.selected {
+			background-color: @egaf_t_k_100;
+		}
+		&:hover {
+			background-color: @egaf_t_k_75;
+		}
+		background-color: @egaf_t_k_25;
+	}
+	&.nol { // cds-commento
+		&.selected {
+			background-color: @egaf_t_k_100;
+		}
+		&:hover {
+			background-color: @egaf_t_k_75;
+		}
+		background-color: @egaf_t_k_25;
+	}
+	&.rol { // strade
+		&.selected {
+			background-color: @egaf_t_2_100;
+		}
+		&:hover {
+			background-color: @egaf_t_2_75;
+		}
+		background-color: @egaf_t_2_25;
+	}
+	&.tol { // conducenti
+		&.selected {
+			background-color: @egaf_t_t_100;
+		}
+		&:hover {
+			background-color: @egaf_t_t_75;
+		}
+		background-color: @egaf_t_t_25;
+	}
+	&.jol { // revisioni
+		&.selected {
+			background-color: @egaf_t_j_100;
+		}
+		&:hover {
+			background-color: @egaf_t_j_75;
+		}
+		background-color: @egaf_t_j_25;
+	}
+	&.lol { // adr
+		&.selected {
+			background-color: @egaf_t_l_100;
+		}
+		&:hover {
+			background-color: @egaf_t_l_75;
+		}
+		background-color: @egaf_t_l_25;
+	}
+	&.mol { // motorizzazione
+		&.selected {
+			background-color: @egaf_t_m_100;
+		}
+		&:hover {
+			background-color: @egaf_t_m_75;
+		}
+		background-color: @egaf_t_m_25;
+	}
+	&.xol { // rifiuti
+		&.selected {
+			background-color: @egaf_t_x_100;
+		}
+		&:hover {
+			background-color: @egaf_t_x_75;
+		}
+		background-color: @egaf_t_x_25;
+	}
+	&.aol { // merci
+		&.selected {
+			background-color: @egaf_t_a_100;
+		}
+		&:hover {
+			background-color: @egaf_t_a_75;
+		}
+		background-color: @egaf_t_a_25;
+	}
+	&.eol { // passeggeri
+		&.selected {
+			background-color: @egaf_t_e_100;
+		}
+		&:hover {
+			background-color: @egaf_t_e_75;
+		}
+		background-color: @egaf_t_e_25;
+	}
+	&.pol { // nautica
+		&.selected {
+			background-color: @egaf_t_p_100;
+		}
+		&:hover {
+			background-color: @egaf_t_p_75;
+		}
+		background-color: @egaf_t_p_25;
+	}
+	&.wol { // infortunistica
+		&.selected {
+			background-color: @egaf_t_1_100;
+		}
+		&:hover {
+			background-color: @egaf_t_1_75;
+		}
+		background-color: @egaf_t_1_25;
+	}
+	&.uol { // pratiche-veicoli
+		&.selected {
+			background-color: @egaf_t_u_100;
+		}
+		&:hover {
+			background-color: @egaf_t_u_75;
+		}
+		background-color: @egaf_t_u_25;
+	}
+	&.yol { // tecnica-veicoli
+		&.selected {
+			background-color: @egaf_t_u_100;
+		}
+		&:hover {
+			background-color: @egaf_t_u_75;
+		}
+		background-color: @egaf_t_u_25;
+	}
+}
+
+.apply {
+	display: inline-block;
+	cursor: pointer;
+	.font-bold (@color-1C, 1em, none);
+	background-color: darken(@color-1A, 5%);
+	padding: .25em .5em;
+
+	.transition(color 0.25s ease-out, background-color 0.25s ease-out;);
+	
+	&:hover {
+		color:white;
+		background-color: darken(@color-1A, 10%);
+	}
+
+	
+}
+
+div.nav {
+	//@padding:.75em;
+	//padding:0 @padding 0 @padding;
+	
+	overflow: visible;
+	
+	.social {
+		white-space: nowrap;
+	}
+	.social, .user {
+		font-size: 1em;
+		height: 1.5em;
+	}
+	.logo {
+		padding:1em 0 .5em 0;
+	}
+
+	.table {
+		.sh;
+	}
+	ul.right {
+		
+		width: 100%;
+		
+		background-color: @color-1A;
+		overflow: visible;
+
+		li {
+			
+			@padding:.25em;
+			border-left:1px solid darken(@color-1A, 10%);
+			text-align: center;
+			margin:0;
+			padding:.25em;
+			overflow: visible;
+			position: static;
+
+			&:first-child {
+				border-left-color:transparent;
+			}
+			&:last-child {
+				border-right-color:transparent;
+			}
+			> * {
+				.wrp;
+			}
+			
+			
+			.input {
+				width:100%;
+			}
+			label {
+				
+				padding: @padding;
+				display: block;
+				vertical-align: middle;
+				input {
+					.arial;
+					font-weight: normal;
+					.wrp;
+					width:100%;
+					border:none;
+					height: 1.75em;
+					padding:.25em;
+					background-color: transparent;
+					
+				}
+			}
+			a {
+				
+				display: block;
+				
+				width:100%;
+				vertical-align: middle;
+				font-size:@font-menu;
+				color:@color-1C;
+				text-decoration: none;
+				text-transform: uppercase;
+				
+				
+				&:hover {
+					color:white;
+				}
+			}
+			
+		}
+	}
+}
+
+
+div.servizi{
+  padding-bottom: 1.5em;
+	.table {
+		.sh;
+	}
+	ul.right {
+  
+		width: 100%;
+		background-color: @color-1D;
+		overflow: visible;
+
+		li {
+			@padding:.25em;
+			border-left:1px solid @color-1A;
+			text-align: center;
+			margin:0;
+			padding:.125em;
+			overflow: visible;
+			position: static;
+
+			&:first-child {
+				border-left-color:transparent;
+			}
+			&:last-child {
+				border-right-color:transparent;
+			}
+			> * {
+				.wrp;
+			}
+      
+			a {
+				display: block;
+				width:100%;
+				vertical-align: middle;
+				font-size:@font-default;
+				color:@color-1A;
+				text-decoration: none;
+				text-transform: uppercase;
+				
+				&:hover {
+          background-color: @color-1A;
+					color: @color-1D;
+				}
+				&.active {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.iter-menu {
+	display: table;
+	//margin-bottom: 1em;
+	> * {
+		display: table-row;
+		> * {
+			display: table-cell;
+			vertical-align: middle;
+			background-color: @color-1A;
+			min-width: @iter-icon-size;
+		}
+	}
+  ul{
+    .shadow(4px 4px 10px rgba(0, 0, 0, 0.55));
+  }
+}
+
+.iter-title {
+	.iter-icon.b01ol {
+		border-left:none !important;
+		background-color: @color-1D;
+		
+		&.selected {
+			background-color: @color-1A;
+		}
+		&:hover {
+			background-color: @color-1B;
+		}
+	}
+	width:100%;
+	min-height: 40px;
+}
+
+@iter-icon-size:44px;
+.iter-icon {
+	min-width: @iter-icon-size;
+	height: @iter-icon-size;
+	display: block;
+	border-left:1px solid white;
+	position: relative;
+	cursor: pointer;
+}
+
+.apply-wrapper {
+	padding:.375em .375em .375em;
+	text-align: right;
+	.wrap;
+	height: @iter-icon-size;
+	min-width: @iter-icon-size;
+	border-left:1px solid white;
+	background-color: @color-1C;
+	line-height: 1;
+}
+
+.apply-box {
+	padding:.5em .5em;
+	display: inline-block;
+	vertical-align: middle;
+	background-color: @color-1A;
+	color: white;
+	cursor: pointer;
+	.transition(background-color 0.25s ease-in-out);
+	&:hover {
+		background-color: darken(@color-1A, 10%);
+	}
+}
+
+.no-blind {
+	position: absolute;
+	width: 100%;
+	border-bottom:4px solid white;
+	margin-bottom: 1em;
+}

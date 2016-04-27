@@ -1,0 +1,284 @@
+//= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+// functions
+
+.round (@radius: 6px) {
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+}
+.round-top (@radius: 6px) {
+	border-radius: @radius @radius 0px 0px;
+	-webkit-border-radius: @radius @radius 0px 0px;
+	-moz-border-radius: @radius @radius 0px 0px;
+}
+.round-bottom (@radius: 6px) {
+	border-radius: 0px 0px @radius @radius;
+	-webkit-border-radius: 0px 0px @radius @radius;
+	-moz-border-radius: 0px 0px @radius @radius;
+}
+.round-left (@radius: 6px) {
+	border-radius: @radius 0px 0px @radius;
+	-webkit-border-radius: @radius 0px 0px @radius;
+	-moz-border-radius: @radius 0px 0px @radius;
+}
+.round-left-only (@radius: 6px) {
+	border-top-left-radius: @radius;
+	border-bottom-left-radius: @radius;
+	-webkit-border-top-left-radius: @radius;
+	-webkit-border-bottom-left-radius:@radius;
+	-moz-border-top-left-radius: @radius;
+	-moz-border-bottom-left-radius: @radius;
+}
+.round-right (@radius: 6px) {
+	border-radius: 0px @radius @radius 0px;
+	-webkit-border-radius: 0px @radius @radius 0px;
+	-moz-border-radius: 0px @radius @radius 0px;
+}
+.round-right-only (@radius: 6px) {
+	border-top-right-radius: @radius;
+	border-bottom-right-radius: @radius;
+	-webkit-border-top-right-radius: @radius;
+	-webkit-border-bottom-right-radius:@radius;
+	-moz-border-top-right-radius: @radius;
+	-moz-border-bottom-right-radius: @radius;
+}
+
+.sprite (@default:0px 0px, @hover:0px 0px) {
+	background-repeat: no-repeat;
+	background-position: @default;
+	&:hover {
+		background-position: @hover;
+	}
+}
+
+
+
+.animate (@duration: .3s, @property: all, @easing: ease-in-out, @delay: initial) {
+	-moz-transition-delay:@delay;
+	-moz-transition-duration:@duration;
+	-moz-transition-property:@property;
+	
+	-webkit-transition-delay:@delay;
+	-webkit-transition-duration:@duration;
+	-webkit-transition-property:@property;
+	
+	-o-transition-delay:@delay;
+	-o-transition-duration:@duration;
+	-o-transition-property:@property;
+	
+	transition-delay:@delay;
+	transition-duration:@duration;
+	transition-property:@property;
+
+	.ease (@easing);
+}
+
+//.ease-in-quad {.ease(cubic-bezier(.55, .085, .68, .53));}
+//.ease-in-cubic {.ease(cubic-bezier(.55, .055, .675, .19));}
+//.ease-in-quart {.ease(cubic-bezier(.895, .03, .685, .22));}
+//.ease-in-quint {.ease(cubic-bezier(.755, .05, .855, .06));}
+//.ease-in-sine {.ease(cubic-bezier(.47, 0, .745, .715));}
+//.ease-in-expo {.ease(cubic-bezier(.95, .05, .795, .035));}
+//.ease-in-circ {.ease(cubic-bezier(.6, .04, .98, .335));}
+//.ease-in-back {.ease(cubic-bezier(.6, -0.28, .735, .045));}
+//.ease-out-quad {.ease(cubic-bezier(.25, .46, .45, .94));}
+//.ease-out-cubic {.ease(cubic-bezier(.215, .61, 0.355, 1));}
+//.ease-out-quart {.ease(cubic-bezier(.165, .84, .440, 1));}
+//.ease-out-quint {.ease(cubic-bezier(.23, 1, .32, 1));}
+//.ease-out-sine {.ease(cubic-bezier(.39, .575, .565, 1));}
+//.ease-out-expo {.ease(cubic-bezier(.19, 1, .22, 1));}
+//.ease-out-circ {.ease(cubic-bezier(.075, .82, .165, 1));}
+//.ease-out-back {.ease(cubic-bezier(.175, .885, .32, 1.275));}
+//.ease-in-out-quad {.ease(cubic-bezier(.455, .03, .515, .955));}
+//.ease-in-out-cubic {.ease(cubic-bezier(.645, .045, .355, 1));}
+//.ease-in-out-quart {.ease(cubic-bezier(.770, .000, .175, 1));}
+//.ease-in-out-quint {.ease(cubic-bezier(.86, 0, .07, 1));}
+//.ease-in-out-sine {.ease(cubic-bezier(.445, .05, .55, .95));}
+//.ease-in-out-expo {.ease(cubic-bezier(1, 0, 0, 1));}
+//.ease-in-out-circ {.ease(cubic-bezier(.785, .135, .15, .86));}
+//.ease-in-out-back {.ease(cubic-bezier(.68, -0.55, .265, 1.55));}
+
+.ease (@easing:ease-in-out) {
+	-moz-transition-timing-function:@easing;
+	-webkit-transition-timing-function:@easing;
+	-o-transition-timing-function:@easing;
+	transition-timing-function:@easing;
+}
+
+.animated (@duration: .3s, @property: left, top, @easing: ease-out, @delay: initial) {
+	.animate (@duration, @property, @easing, @delay);
+}
+
+.transition(@transition:.3s ease-in-out initial) {
+	//
+	//classic css transition style
+	//.transition(width .4s ease-in-out);
+	//.transition(color .4s ease-in-out);
+	//.transition(border-color .4s ease-in-out .2s);
+	//
+	.ease;
+	-webkit-transition:@transition;
+	-khtml-transition:@transition;
+	-moz-transition:@transition;
+	-ms-transition:@transition;
+	-o-transition:@transition;
+	transition:@transition;
+}
+
+.blur (@px:2px) {
+	-webkit-filter:blur(@px);
+}
+
+.skew (@degrees:0deg) {
+	.transform(skew(@degrees));
+}
+
+.transform (@effects) {
+	transform: @effects;
+	-ms-transform: @effects;
+	-webkit-transform: @effects;
+	-o-transform: @effects;
+	-moz-transform: @effects;
+}
+
+.v-gradient (@color:#cbcbcb, @strenght:5%, outside) {
+	@top: lighten(@color,@strenght);
+	@bottom: darken(@color,@strenght);
+	.v-full-gradient(@top, @bottom, 0%, 100%);
+}
+
+.v-gradient (@color:#cbcbcb, @strenght:5%, inside) {
+	@bottom: lighten(@color,@strenght);
+	@top: darken(@color,@strenght);
+	.v-full-gradient(@top, @bottom, 0%, 100%);
+}
+
+.v-full-gradient (@top:white, @bottom:#CBCBCB, @start:0%, @stop:100%) {
+	background: -moz-linear-gradient(top, @top @start, @bottom @stop);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(@start,@top), color-stop(@stop,@bottom));
+	background: -webkit-linear-gradient(top, @top @start, @bottom @stop);
+	background: -o-linear-gradient(top, @top @start, @bottom @stop);
+	background: -ms-linear-gradient(top, @top @start, @bottom @stop);
+	background: linear-gradient(top, @top @start, @bottom @stop);
+}
+
+.h-full-gradient (@left:white, @right:#CBCBCB, @start:0%, @stop:100%) {
+	background: -moz-linear-gradient(left, @left @start, @right @stop);
+	background: -webkit-gradient(linear, left top, left right, color-stop(@start,@left), color-stop(@stop,@right));
+	background: -webkit-linear-gradient(left, @left @start, @right @stop);
+	background: -o-linear-gradient(left, @left @start, @right @stop);
+	background: -ms-linear-gradient(left, @left @start, @right @stop);
+	background: linear-gradient(left, @left @start, @right @stop);
+}
+
+.gloss-gradient (@top: rgb(200,200,200), @middle: rgb(100,100,100), @bottom: rgb(150,150,150)) {
+	background-image: linear-gradient(bottom, @bottom 0%, @top 100%);
+	background-image: -o-linear-gradient(bottom, @bottom 0%, @top 100%);
+	background-image: -moz-linear-gradient(bottom, @bottom 0%, @top 100%);
+	background-image: -webkit-linear-gradient(bottom, @bottom 0%, @top 100%);
+	background-image: -ms-linear-gradient(bottom, @bottom 0%, @top 100%);
+}
+
+.scale (@scale:1) {
+	transform: scale(@scale);
+	-ms-transform: scale(@scale);
+	-webkit-transform: scale(@scale);
+	-o-transform: scale(@scale);
+	-moz-transform: scale(@scale);
+}
+
+.rotate (@angle:0deg) {
+	transform: rotate(@angle);
+	-ms-transform: rotate(@angle); // IE 9
+	-webkit-transform: rotate(@angle); // Safari and Chrome
+	-o-transform: rotate(@angle); // Opera
+	-moz-transform: rotate(@angle); // Firefox
+}
+
+.set-placeholder (@color, @focused-color:white) {
+	::-webkit-input-placeholder { color:@color; }
+	input:focus::-webkit-input-placeholder { color:@focused-color; }
+
+	:-moz-placeholder { color:@color; }
+	input:focus:-moz-placeholder { color:@focused-color; }
+	::-moz-placeholder { color:@color; }
+	input:focus::-moz-placeholder { color:@focused-color; }
+
+	:-ms-input-placeholder { color:@color; }
+	input:focus:-ms-input-placeholder { color:@focused-color; }
+}
+
+.set-antialias (@antialias:antialiased) {
+	body {
+		-webkit-font-smoothing: @antialias;
+	}
+}
+
+//= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+.wrap {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.bg(@backgroundImage, @backgroundPosition:center) {
+	background-image: url("@{backgroundImage}");
+	background-position: @backgroundPosition;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+.sprite(@horizontalStep, @verticalStep, @backgroundImage, @backgroundWidth, @backgroundHeight:@backgroundWidth) {
+	background-image: url("@{backgroundImage}");
+	background-position: -(@horizontalStep * @backgroundWidth) -(@verticalStep * @backgroundHeight);
+	background-repeat:no-repeat;
+	background-color:transparent;
+	width:@backgroundWidth;
+	height:@backgroundHeight;
+	.wrap;
+	.animate(.25s);
+}
+
+.sprite-position(@horizontalStep, @verticalStep, @backgroundWidth, @backgroundHeight:@backgroundWidth) {
+	background-position: -(@horizontalStep * @backgroundWidth) -(@verticalStep * @backgroundHeight);
+}
+
+.appearance(@appearence:normal) {
+	//
+	//The appearance property allows you to make an element look like a standard user interface element.
+	//http://css-tricks.com/almanac/properties/a/appearance/
+  //
+	//Webkit values: checkbox | radio | push-button | square-button | button | button-bevel | listbox | listitem | menulist | menulist-button | menulist-text | menulist-textfield | scrollbarbutton-up | scrollbarbutton-down | scrollbarbutton-left | scrollbarbutton-right | scrollbartrack-horizontal | scrollbartrack-vertical | scrollbarthumb-horizontal | scrollbarthumb-vertical | scrollbargripper-horizontal | scrollbargripper-vertical | slider-horizontal | slider-vertical | sliderthumb-horizontal | sliderthumb-vertical | caret | searchfield | searchfield-decoration | searchfield-results-decoration | searchfield-results-button | searchfield-cancel-button | textfield | textarea;
+	//Mozilla values: none | button | checkbox | checkbox-container | checkbox-small | dialog | listbox | menuitem | menulist | menulist-button | menulist-textfield | menupopup | progressbar | radio | radio-container | radio-small | resizer | scrollbar | scrollbarbutton-down | scrollbarbutton-left | scrollbarbutton-right | scrollbarbutton-up | scrollbartrack-horizontal | scrollbartrack-vertical | separator | statusbar | tab | tab-left-edge Obsolete | tabpanels | textfield | textfield-multiline | toolbar | toolbarbutton | toolbox | -moz-mac-unified-toolbar | -moz-win-borderless-glass | -moz-win-browsertabbar-toolbox | -moz-win-communications-toolbox | -moz-win-glass | -moz-win-media-toolbox | tooltip | treeheadercell | treeheadersortarrow | treeitem | treetwisty | treetwistyopen | treeview | window;
+	//
+	//Code snippet:
+	//.appearance(button);
+	//
+	-webkit-appearance:@appearence;
+	-khtml-appearance:@appearence;
+	-moz-appearance:@appearence;
+	-ms-appearance:@appearence;
+	-o-appearance:@appearence;
+	appearance:@appearence;
+}
+
+.opacity(@opacity) {
+	
+	opacity:@opacity;
+	
+	-khtml-opacity: @opacity;
+	-moz-opacity:@opacity;
+	@msOpacity:(@opacity * 100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{msOpacity})";
+	filter:~"alpha(opacity=@{msOpacity})"; // IE8
+}
+
+.text-overflow(@overflow:ellipsis) {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: @overflow;
+	-ms-text-overflow: @overflow;
+}

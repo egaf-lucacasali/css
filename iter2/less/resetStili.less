@@ -1,0 +1,91 @@
+.resetSkin_BorderRadius () {
+  -moz-border-radius: 0; 
+  -webkit-border-radius: 0; 
+  border-radius: 0; 
+  -khtml-border-radius: 0;
+}
+.resetSkin_Background(@color){
+  background: none;
+  background-color: @color;
+  background-position: 95% center;
+}
+
+ //reset stili SimpleButtonSkin
+	.SimpleButtonSkin, 
+	.SimpleButtonSkin:hover, 
+	.SimpleButtonSkinBlue,
+	.SimpleButtonSkinBlue:hover,
+	.SimpleButtonSkinRed,
+	.SimpleButtonSkinRed:hover,
+	.SimpleButtonSkinOrange,
+	.SimpleButtonSkinOrange:hover,
+	.SimpleButtonSkinYellow,
+	.SimpleButtonSkinYellow:hover,
+	.Skin_SimpleButton_Default, 
+	.Skin_SimpleButton_Default:hover,
+	.Skin_SimpleButton_Blue, 
+	.Skin_SimpleButton_Blue:hover, 
+	.Skin_SimpleButton_Red, 
+	.Skin_SimpleButton_Red:hover, 
+	.Skin_SimpleButton_Orange, 
+	.Skin_SimpleButton_Orange:hover,
+	.Skin_SimpleButton_Yellow, 
+	.Skin_SimpleButton_Yellow:hover{
+    .resetSkin_Background(@color-1C);
+    .font-normal (white, @font-default, uppercase);
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: .25em;
+    text-align:center;
+    border: 0;
+    .resetSkin_BorderRadius ();
+	}
+
+ //reset stili TitleSkin
+	.Skin_Title_Default, 
+	.Skin_Title_Blue, 
+	.Skin_Title_DarkBlue, 
+	.Skin_Title_Orange, 
+	.Skin_Title_Red, 
+	.Skin_Title_Lightbrown, 
+	.Skin_Title_Lightblue, 
+  .TitleSkin,
+  .TitleSkinBlue,
+  .TitleSkinDarkBlue,
+  .TitleSkinOrange,
+  .TitleSkinRed,
+  .TitleSkinLightbrown,
+  .TitleSkinLightblue{
+    .resetSkin_Background(@color-1D);
+    .font-normal (white, @font-default, none);
+    padding: .125em;
+    border: 0;
+    .resetSkin_BorderRadius ();
+	}
+
+ // reset stili Skin_Background BackgroundSkinNoShadow (docuemnti collegati)
+	.Skin_Background_Default, .BackgroundSkinNoShadow{
+    background-color:white;
+    border:1px solid @color-1D;
+    .resetSkin_BorderRadius ();
+	}
+
+// reset stili campi form selezionati
+	.PxmlForm input[type=text]:focus, 
+	.PxmlForm textarea:focus, 
+	.PxmlForm select:focus {
+		border:0 !important;
+	}
+
+// attesa caricamento e messaggi in popup
+.Ajax_Activity,
+#backgroundDomDragDiv{
+	background-color: @color-1D;
+	opacity: 0.7;
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+}

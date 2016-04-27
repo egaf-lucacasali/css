@@ -1,0 +1,277 @@
+.egafd_titolo,
+.egafd_sottotitolo {
+	font-size: 1.25em;
+	font-weight: bold;
+  .arial;
+}
+
+.egafd_parole {
+  .arial;
+}
+
+.egafd_lbl {
+	margin: @basePadding 0;
+	.bordered-title-light();
+}
+
+.egafd_tbl {
+	background-color: @color-1D;
+	padding: @main-padding;
+  .font-bold;
+	span {
+		color:black;
+		font-weight: normal;
+    .arial;
+		font-size: @font-default;
+		padding-left: @main-padding/2;
+	}
+}
+
+.egafd_storico,
+.egafd_riservato {
+	.bordered-title-light();
+	margin-right: @main-padding;
+}
+
+.egafd_storico {
+	.background-icon("img/doc-nonvigente.png", 0 center);
+}
+
+.egafd_riservato {
+	.background-icon("img/doc-riservato.png", 0 center);
+}
+
+.egafd_storico,
+.egafd_riservato {
+	padding-left:2em;
+	display: inline-block;
+	margin-right: @main-padding;
+	&.red {
+		color:@color-1A;
+		background-color: @color-1D;
+	}
+}
+
+.egafd_tipo {
+	.bordered-title();
+	margin-right: @main-padding;
+	margin-bottom:@main-padding;
+    margin-top: @main-padding;
+}
+
+.egafd_tipo + .egafd_aggiornatoal {
+	margin-left: -@basePadding;
+}
+
+.egafd_aggiornatoal {
+	.bordered-title-light();
+}
+
+.egafd_riferim,
+.egafd_autore {
+  .arial;
+	ul {
+    list-style-position: inherit !important;
+    margin-left: 1em;
+	}
+}
+
+.egafd_riferim a {
+  white-space: inherit;
+}
+
+.egafd_riferim {
+  li, p {
+    font-size: .8em;
+  }
+}
+
+.egafd_autore {
+  li, p {
+    font-size: 1em;
+  }
+}
+.egafd_autore_nota{
+	color: @color-1A;
+	font-size: .75em;
+}
+
+div#noteTypeBasedraftPre {
+  font-size: 0;
+}
+.egafd_noteTypeBase {
+  padding-bottom: 1em;
+}
+.egafd_noteTypeBasedraft b {
+	color: white;
+	text-transform: uppercase;
+	background-color: @color-1A;
+	margin-left: -0.125em;
+	padding: .125em;
+  padding-bottom: 0;
+}
+
+.egafd_titolo,
+.egafd_ipotesi,
+.egafd_noteTypeBasedraft {
+	text-transform:normal;
+}
+
+.egafd_pre-line {
+  white-space: pre-line;
+}
+
+.egafd_tbl-viol {
+  width: 100%;
+}
+.egafd_tbl-viol,
+.egafd_tbl-bib {
+  border-collapse: collapse;
+  td{
+    padding: 2px 4px !important;
+    border: 1px solid @color-1A !important;
+    vertical-align: top;
+    &.td2 {
+      font-weight: bold;
+    }
+  }
+}
+
+.bigdiv {
+  table{
+    border-collapse: collapse;
+  }
+  td{
+    padding: 2px 4px !important;
+    border: 1px solid @color-1A !important;
+  }
+}
+
+.egafd_blackbox{
+	border: 1px solid black;
+	padding: 0 .5em;
+}
+
+.bigdiv,
+.egafd_blackbox {
+  a *{
+    color: @color-1B !important;
+    white-space: normal;
+  }
+}
+
+.egafd_noteTypeBasedraftPrint{
+  display: none;
+}
+
+.egafd_adrtd1{
+  float: left;
+  width: 58%;
+}
+.egafd_materiaadr,
+.egafd_adrtd1 {
+  .bigdiv {
+    table, td {
+      border: 0 !important;
+    }
+  }
+}
+.egafd_adrtd2{
+  float: right; 
+  width: 41%;
+  overflow: visible;
+  border: 1px solid @color-1A;
+}
+
+.egafd_opere {
+  span {
+    padding-right: 0.5em;
+  }
+  img{
+    width: auto;
+  }
+}
+
+.egafd_onlyprint{
+	display: none;
+}
+
+.egafd_needlogin,
+.egafd_complanagr,
+.egafd_needbuy {
+	white-space: normal !important;
+}
+
+.egafd_modulo_nota {
+  color: #5f574f;
+  font-size: .875em;
+}
+
+.egafd_modulo_testo{
+	b{
+		text-decoration: underline;
+	}
+}
+
+.egafd_modulo_privacy{
+	a {
+		white-space: initial;
+		text-decoration: underline;
+	}
+}
+
+//grafica violazioni
+.egafd_violazioni {
+  .egafd_violnorma div.egafd_txt {
+    padding: .25em .5em .25em .5em;
+    .arial;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  
+  table.egafd_sanzioni {
+    margin-top: .75em;
+    border-collapse: collapse;
+  
+    td {
+      padding: .25em .5em .25em .5em;
+      border: 1px solid black !important;
+      border-collapse: collapse;
+      vertical-align: top;
+      
+      span {
+        color: white;
+        font-weight: lighter;
+        white-space: nowrap;
+      }
+    
+      &.egafd_s-tit {
+        padding: 0 !important;
+      }
+      
+      &.egafd_s-c1 {
+        width: 3em;
+        text-align: right;
+      }
+      
+      &.egafd_sa-c2  {
+        width: 3em;
+      }
+      
+      &.black {
+        padding: .25em .5em .25em .5em;
+      }
+      &.white {
+        font-weight: normal;
+      }
+      &.bold {
+        font-weight: bold;
+      }
+    }
+
+    div.egafd_lbl {
+      display: block;
+      margin: 0;
+    }
+  }
+}

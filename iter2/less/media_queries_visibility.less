@@ -1,0 +1,95 @@
+
+.windowheightstep (@space,@box,@height){
+  .window.@{space}.@{box}{  
+    max-height: @height;
+    overflow: hidden;
+  }
+}
+
+.windowheightstep(catalogo,dottrina,      @wh-r2);
+.windowheightstep(catalogo,normativa,     @wh-r1);
+.windowheightstep(catalogo,prassi,        @wh-r2);
+.windowheightstep(catalogo,giurisprudenza,@wh-r2);
+.windowheightstep(catalogo,bibliografia,  @wh-r1);
+.windowheightstep(catalogo,notizie,       @wh-r2);
+.windowheightstep(catalogo,quesiti,       @wh-r3);
+.windowheightstep(catalogo,aggiornamenti, @wh-r2);
+
+.windowheightstep(home,dottrina,      @wh-r2);
+.windowheightstep(home,normativa,     @wh-r1);
+.windowheightstep(home,prassi,        @wh-r1);
+.windowheightstep(home,giurisprudenza,@wh-r2);
+.windowheightstep(home,bibliografia,  @wh-r1);
+.windowheightstep(home,notizie,       @wh-r2);
+.windowheightstep(home,quesiti,       @wh-r1);
+
+
+@media only screen and (min-width: 1280px) {
+  .windowheightstep(catalogo,prassi,        @wh-r1);
+}
+@media only screen and (max-width: 1023px) {
+  .article.book.step3 {
+		display: none;
+	}
+  .windowheightstep(catalogo,dottrina,      @wh-r3);
+  .windowheightstep(catalogo,normativa,     @wh-r2);
+  .windowheightstep(catalogo,giurisprudenza,@wh-r3);
+
+  .windowheightstep(home,normativa,     @wh-r2);
+  .windowheightstep(home,prassi,        @wh-r2);
+  .windowheightstep(home,quesiti,       @wh-r2);
+}
+@media only screen and (max-width: 739px) {
+	.bordered-title {
+		.see-all {
+			div {
+				display: none !important;
+			}
+		}
+		span {
+			display: none !important;
+      &.send-span {
+        display: inline !important;
+      }
+		}
+	}
+  .bigdiv img {
+	  height: 150px;
+	}
+}
+@media only screen and (max-width: 479px) {
+  .article.book.step2{
+		display: none;
+	}
+  .windowheightstep(catalogo,normativa,     @wh-r2);
+  .windowheightstep(catalogo,quesiti,       @wh-r2);
+}
+
+@media only screen and (min-width: 1024px) {
+	// desktop
+	.on-mobile { display: none; }
+}
+
+@media only screen and (max-width: 1023px) {
+	// tablet landscape
+	.on-desktop { display: none; }
+	.block-on-mobile {
+		display: block !important;
+	}
+
+	body.doc > *,
+	body > *,
+	.window {
+		//overflow: visible;
+	}
+	
+	#noteTypeBasedraft {
+    position: relative !important;
+    max-height: initial !important;
+		bottom: auto;
+		height: auto;
+		background-color: transparent;
+		padding: .125em;
+		border: 0;
+	}
+}
