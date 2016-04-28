@@ -1,2 +1,4 @@
+28-04-2016
+	sistemato div#msg
 27-04-2016
 	creato nuovo repo per salvare i sorgenti less del css http://www.egaf.it/egaf/iter.pkg/rs/css/styles.css
