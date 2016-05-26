@@ -1,5 +1,5 @@
 .set-placeholder (@color-1B, @color-1B);
-.set-steps(200px, 150px, 40px);
+//.set-steps(200px, 150px, 40px);
 .set-antialias;
 
 
@@ -262,75 +262,74 @@ body {
 	min-height: 480px;
 	.arial;
 }
-div#appBody {
-	.upper-menu {
-    background-color: @color-1C;
-    background-image: url('img/social-user-bg.png');
-    background-repeat:repeat-y;
-    //.h-full-gradient (fade(@color-1C,0%), @color-1C, 0%, 100%);
+
+.upper-menu {
+background-color: @color-1C;
+background-image: url('img/social-user-bg.png');
+background-repeat:repeat-y;
+//.h-full-gradient (fade(@color-1C,0%), @color-1C, 0%, 100%);
+	
+	td {
+		padding-left:.25em;
+		padding-right:.25em;
+	}
+	.user {
+		color:white;
 		
-		td {
-			padding-left:.25em;
-			padding-right:.25em;
-		}
-		.user {
-			color:white;
-			
-			strong {
-				padding: 0;
-				//position: absolute;
-				
-    			line-height: 1.5em;
-    			
-				text-transform: uppercase;
-				.text-overflow();
-				
-			}
-			a {
-				padding:.5em .5em 0 .5em;
-
-			}
-		}
-
-		.social {
-			//
+		strong {
 			padding: 0;
-			> a {
-				padding-top: .25em !important;
-				display: inline-block;
-			}
+			//position: absolute;
+			
+			line-height: 1.5em;
+			
+			text-transform: uppercase;
+			.text-overflow();
+			
 		}
-		.action {
-			text-align: right;
-			white-space: nowrap;
+		a {
+			padding:.5em .5em 0 .5em;
+
+		}
+	}
+
+	.social {
+		//
+		padding: 0;
+		> a {
+			padding-top: .25em !important;
+			display: inline-block;
+		}
+	}
+	.action {
+		text-align: right;
+		white-space: nowrap;
+		a {
+			display: inline-block;
+		}
+		img {
+			position: relative;
+			padding-left:.25em;
+			top: 2px;
+		}
+	}
+	
+	ul {
+		position: relative;
+		top:3px;
+		display: inline-block;
+		li {
+			padding-top:0;
+			list-style-type: none;
+			display: inline-block;
+			padding-left:1.5em;
 			a {
 				display: inline-block;
-			}
-			img {
-				position: relative;
-				padding-left:.25em;
-				top: 2px;
-			}
-		}
-		
-		ul {
-			position: relative;
-			top:3px;
-			display: inline-block;
-			li {
-				padding-top:0;
-				list-style-type: none;
-				display: inline-block;
-				padding-left:1.5em;
-				a {
-					display: inline-block;
-					text-transform: lowercase;
-					//font-weight: bold;
-					text-decoration: none;
-					> div {
-						display: table-cell;
-						vertical-align: middle;
-					}
+				text-transform: lowercase;
+				//font-weight: bold;
+				text-decoration: none;
+				> div {
+					display: table-cell;
+					vertical-align: middle;
 				}
 			}
 		}
@@ -398,37 +397,21 @@ div#msg {
 }
 
 div#backgroundEgafAlert {
-	z-index: 1000;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	position: fixed;
-	display: none;
-	background: @color-1D;
-	background: rgba(221, 216, 210, 0.6);
+	background: @color-1D !important;
+	background: rgba(221, 216, 210, 0.6) !important;
 
   div#popupEgafAlert {
-    background-color: white;
-    max-width: 30em;
-    max-height: 90%;
-    overflow: auto;
-    margin: auto;
-    margin-top: 1em;
-    padding: 1em;
+    background-color: white !important;
+    color: black !important;
     .shadow(4px 4px 10px rgba(0, 0, 0, 0.55));
     .round;
-
-    .butonPopupEgafAlert {
-      width: 100%;
-      text-align: center;
-      margin-top: 2em;
-
-      span {
-        background-color: @color-1D;
-        cursor: pointer;
-        padding: 0.25em;
-      }
+    
+	span {
+		color: black !important;
+	}
+	
+    .butonPopupEgafAlert span {
+        background-color: @color-1D !important;
     }
   }
 }
@@ -994,6 +977,7 @@ tr.t-row div.icon {
 
 .use-steps {
 	.wrap;
+	margin: auto;
 }
 
 
