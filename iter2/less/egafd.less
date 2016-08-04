@@ -102,19 +102,29 @@ div#noteTypeBasedraftPre {
 .egafd_noteTypeBase {
   padding-bottom: 1em;
 }
-.egafd_noteTypeBasedraft b {
-	color: white;
-	text-transform: uppercase;
-	background-color: @color-1A;
-	margin-left: -0.125em;
-	padding: .125em;
-  padding-bottom: 0;
-}
+.egafd_noteTypeBasedraft{
+	font-size: initial !important;
+	
+	p {
+		font-size: initial !important;
+		min-height: 1em;
+	}
+	
+	b {
+		color: white;
+		text-transform: uppercase;
+		background-color: @color-1A;
+		margin-left: -0.125em;
+		padding: .125em;
+		padding-bottom: 0;
+	}
+} 
 
 .egafd_titolo,
 .egafd_ipotesi,
 .egafd_noteTypeBasedraft {
-	text-transform:normal;
+	text-transform: none;
+	padding: 0 0.25em; 
 }
 
 .egafd_pre-line {

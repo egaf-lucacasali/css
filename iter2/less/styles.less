@@ -152,6 +152,11 @@ html, body {
 
 
 
+div#dataHolder {
+	overflow: visible;
+}
+
+
 
 
 
@@ -506,6 +511,13 @@ div#backgroundEgafAlert {
         background-color: @color-1D !important;
     }
   }
+}
+
+b.box_needlogin {
+    white-space: normal;
+    cursor: pointer;
+    color: @color-1A;
+    font-weight: normal;
 }
 
 .table {
@@ -879,8 +891,24 @@ h1 {
 		}
 	}
 }
+
+.window.catalogo {
+	.boxnews.article {
+    	height: 5.5em;
+		&.aggiornamenti {
+		    height: 9em;
+		}
+	}
+	p.BoxNewsNote {
+	    display: none;
+	    max-height: none;
+	}
+}
 .boxnews.article{
   height: 9em;
+  &.giurisprudenza {
+    height: 5.25em;
+  }
   &.quesito {
     //height: auto !important;
   }
@@ -908,6 +936,7 @@ h1 {
 .book-title {
   max-height: inherit !important;
 }
+
 
 .books {
 	.article {
@@ -1109,12 +1138,11 @@ tr.t-row div.icon {
 
 div.window.services div.col-3 {
   div.services {
-    padding-top: 0.5em;
     img.services {
       padding-top: 0.25em;
     }
     &.relative {
-      position: relative;
+      width: 100%;
     }
     span, p {
       font-size: @font-services;
@@ -1148,10 +1176,7 @@ div.window.services div.col-3 {
     }
     
     div.servicesbutton {
-      position: absolute;
-      z-index: 1;
-      bottom: 0;
-      right: 0;
+      float: right;
       background-color: white;
       padding-right: 1em;
       padding-top: 0.5em;
