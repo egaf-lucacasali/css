@@ -83,6 +83,7 @@ html, body {
 #Layout .layout-middle {
 	display: inherit;
 	height: 100%;
+	min-height: 1px;
 	width: 100%;
 	position: relative;
 }
@@ -101,11 +102,11 @@ html, body {
 	display: table-footer-group;
 	height: 1%;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-	#Layout .layout-middle .outWrap {
-		position: static;
-	}
-}
+//@media screen and (-webkit-min-device-pixel-ratio: 0) {
+//	#Layout .layout-middle .outWrap {
+//		position: static;
+//	}
+//}
 //Heaer Layout
 #top-bar {
 	display: table;
@@ -503,6 +504,10 @@ div#backgroundEgafAlert {
     .shadow(4px 4px 10px rgba(0, 0, 0, 0.55));
     .round;
     
+    a {
+		white-space: normal;
+	}
+	
 	span {
 		color: black !important;
 	}

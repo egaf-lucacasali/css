@@ -381,12 +381,15 @@ div.EFG_10>div>div>span{
 
 	.OrderByCommander_Contenitore {
 		margin-right:1em;
-	}
-
-	
-	.OrderByCommander_Contenitore {
 		float: left;
+		
+		div {
+		    float: left;
+		    margin-top: 0.25em;
+		    margin-left: 0.5em;
+		}
 	}
+	
 	.PageNavigator_PageScroller {
 		float: right;
 	}
@@ -512,6 +515,8 @@ a.buttonStyle {
 	bottom: auto !important;
 	z-index: 100;
 	margin-top: -1em !important;
+	position: relative !important;
+	
 	ul {
 		background-color: @color-1D;
 		padding:.5em;
