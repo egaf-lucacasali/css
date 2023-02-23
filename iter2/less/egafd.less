@@ -1,11 +1,16 @@
 .egafd_titolo {
 	clear: both;
-}
-
-.egafd_titolo , .egafd_sottotitolo {
-	font-size: 1.25em;
 	font-weight: bold;
 	.arial;
+	h1{
+		font-size: 1.25em;
+	}
+}
+
+.egafd_sottotitolo {
+	font-weight: bold;
+	.arial;
+	font-size: 1.25em;
 }
 
 .egafd_parole {
@@ -26,7 +31,7 @@
 		font-weight: normal;
 		.arial;
 		font-size: @font-default;
-		padding-left: @main-padding / 2;
+		padding-left: (@main-padding/2);
 	}
 }
 
@@ -41,6 +46,7 @@
 
 .egafd_riservato {
 	.background-icon ("img/doc-riservato.png" , 0 center);
+	background-color: black;
 }
 
 .egafd_storico , .egafd_riservato {
@@ -58,6 +64,10 @@
 	margin-right: @main-padding;
 	margin-bottom: @main-padding;
 	margin-top: @main-padding;
+}
+
+.egafd_tipodoc {
+  clear: both;
 }
 
 .egafd_tipo + .egafd_aggiornatoal {
@@ -82,7 +92,7 @@
 
 .egafd_riferim {
 	li , p {
-		font-size: .8em;
+		font-size: escape('.8em');
 	}
 }
 
@@ -94,7 +104,7 @@
 
 .egafd_autore_nota {
 	color: @color-1A;
-	font-size: .75em;
+	font-size: @0p75em;
 }
 
 div#noteTypeBasedraftPre {
@@ -117,14 +127,14 @@ div#noteTypeBasedraftPre {
 		text-transform: uppercase;
 		background-color: @color-1A;
 		margin-left: -0.125em;
-		padding: .125em;
+		padding: @0p125em;
 		padding-bottom: 0;
 	}
 }
 
 .egafd_titolo , .egafd_ipotesi , .egafd_noteTypeBasedraft {
 	text-transform: none;
-	padding: 0 0.25em;
+	padding: 0 @0p25em;
 }
 
 .egafd_pre-line {
@@ -160,7 +170,7 @@ div#noteTypeBasedraftPre {
 
 .egafd_blackbox {
 	border: 1px solid black;
-	padding: 0 .5em;
+	padding: 0 @0p5em;
 }
 
 .bigdiv , .egafd_blackbox {
@@ -196,7 +206,7 @@ div#noteTypeBasedraftPre {
 
 .egafd_opere {
 	span {
-		padding-right: 0.5em;
+		padding-right: @0p5em;
 	}
 
 	img {
@@ -212,9 +222,38 @@ div#noteTypeBasedraftPre {
 	white-space: normal !important;
 }
 
+.egafd_camsg {
+	a {
+		white-space: normal;
+	}
+	.titleMSG {
+	color: @color-1A;
+		font-size: 1.25em;
+		font-weight: bold;
+		text-align: center;
+		padding-bottom: 1em;
+	}
+}
+.egafd_container.egafd_lcpsmsg {
+	padding-top: 2em;
+	.divbutton {
+	font-weight: bold;
+		width: 100%;
+		text-align: center;
+		margin-top: 1em;
+	}
+	a {
+		white-space: normal;
+	}
+	.titleMSG {
+		color: @color-1A;
+		font-size: 1.25em;
+		font-weight: bold;
+	}
+}
 .egafd_modulo_nota {
-	color: #5f574f;
-	font-size: .875em;
+	color: @color-1A;
+	font-size: escape('.875em');
 }
 
 .egafd_modulo_testo {
@@ -233,22 +272,21 @@ div#noteTypeBasedraftPre {
 //grafica violazioni
 .egafd_violazioni {
 	.egafd_violnorma div.egafd_txt {
-		padding: .25em .5em .25em .5em;
+		padding: @0p25em @0p5em @0p25em @0p5em;
 		.arial;
 		font-weight: bold;
 		font-size: 1em;
 	}
 
 	table.egafd_sanzioni {
-		margin-top: .75em;
+		margin-top: @0p75em;
 		border-collapse: collapse;
 		td {
-			padding: .25em .5em .25em .5em;
+			padding: @0p25em @0p5em @0p25em @0p5em;
 			border: 1px solid black !important;
 			border-collapse: collapse;
 			vertical-align: top;
 			span {
-				color: white;
 				font-weight: lighter;
 				white-space: nowrap;
 			}
@@ -267,7 +305,7 @@ div#noteTypeBasedraftPre {
 			}
 
 			&.black {
-				padding: .25em .5em .25em .5em;
+				padding: @0p25em @0p5em @0p25em @0p5em;
 			}
 
 			&.white {

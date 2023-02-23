@@ -8,7 +8,7 @@
 	width:@revoIconSearchSize;
 	height:@revoIconSearchSize;
 	//background-color: red !important;
-	margin-right:.25em;
+	margin-right:@0p25em;
 }
 
 .openedArrow {
@@ -93,7 +93,11 @@
 					}
 				}
 			}
-			
+			&.inPreparazione > div:hover {
+				background-color: transparent;
+				color: black;
+				cursor: default;
+			}
 		}
 	}
 	
@@ -171,12 +175,12 @@ table.TitlesContent_Content {
 .openListDoc {
 	background-color: @color-1A;
 	color:white;
-	right: .5em;
+	right: @0p5em;
 
 	float: right;
 	display: inline-block;
 	margin-left: 1em;
-	padding: .125em;
+	padding: @0p125em;
 }
 //
 //document
@@ -199,12 +203,19 @@ table.TitlesContent_Content {
 }
 
 .noteTypeBasedraft {
+	clear: both;
 	overflow: auto;
 	margin: auto;
 	background-color: @color-1D;
 	border: 2px solid @color-1A;
 	.wrap;
-	padding: .125em;
+	padding: @0p125em;
+	span {
+	  font-size: 1em;
+	}
+	li {
+	  margin-left: 1.5em !important;
+	}
 }
 
 #egaf_c31.egafDocument, 
@@ -214,23 +225,24 @@ table.TitlesContent_Content {
 }
 
 .egafDocumentPrint,
-.egafDocColl {
+.egafDocColl,
+.egafDocCopies {
 	font-weight: bold;
 	float: right;
 	background-color: @color-1D;
-	margin: .5em 0;
+	margin: @0p5em 0;
 	overflow: auto;
-	padding: .5em;
+	padding: @0p5em;
 	color: @color-1B;
-	margin-left: 0.25em;
+	margin-left: @0p25em;
 }
 
 .DocumentViewContent_NavigazioneTop,
 .DocumentViewContent_NavigazioneBottom {
 	background-color: @color-1D;
-	margin: .5em 0;
+	margin: @0p5em 0;
 	overflow: auto;
-	padding: .5em;
+	padding: @0p5em;
 	color: @color-1B;
   
   table {
@@ -253,8 +265,17 @@ table.TitlesContent_Content {
   }
   td strong {
     background-color: white;
-    padding: .125em .375em;
+    padding: @0p125em @0p375em;
   }
+}
+.vol_button {
+  overflow: auto;
+  font-size: inherit !important;
+  background-color: @color-1D;
+  padding: 1em;
+  color: @color-1A;
+  font-weight: bold;
+  cursor: pointer;
 }
 .TitlesHeader_Td.TitlesColumnHeaderVisible {
 	display: none;
@@ -263,17 +284,29 @@ table.TitlesContent_Content {
 .PopupTitle_left span {
 	font-size: inherit !important;
 	background-color: @color-1D;
-	margin: .5em 0;
-	padding: .5em;
+	margin: @0p5em 0;
+	padding: @0p5em;
 	color: @color-1A;
   font-weight: bold;
 }
 #egafDocumentContainer{
-  clear: both;
+	clear: both;
+
 }
 #egafDocumentContainer span, 
 .egafd_fulldoc span {
-  font-size: inherit;
+	font-size: inherit;
+}
+
+#CopiesDocs_TitleHolder {
+	display: none;
+	clear: both;
+	border: 2px solid @color-1A;
+	max-height: 10em;
+	overflow: auto;
+}
+.egafd_fulldoc {
+	margin: @0p5em;
 }
 
 // documenti collegati
@@ -284,6 +317,12 @@ table.TitlesContent_Content {
 }
 #LinkedDocsTabs{
   background-color: @color-1D;
+}
+#promacDocsTabs-doc_container {
+	border: 2px solid @color-1A;
+	background-color: white;
+	max-height: 10em;
+	overflow: auto;
 }
 #LinkedDocsTabs-doc_container{
   border: @spessoreBordo solid @color-1A;
@@ -297,7 +336,7 @@ table.TitlesContent_Content {
   border-collapse: collapse;
   content: "";
   margin: 0;
-  padding: .2em .2em 0;
+  padding: escape('.2em') escape('.2em') 0;
 }
 .LinkedDocsTabsUl:after {
   border-collapse: collapse;
@@ -310,9 +349,9 @@ table.TitlesContent_Content {
   border-bottom-width: 0;
   float: left;
   list-style: none outside none;
-  margin: 1px .25em 0 0;
-  padding-left: 0.25em;
-  padding-right: 0.25em;
+  margin: 1px @0p25em 0 0;
+  padding-left: @0p25em;
+  padding-right: @0p25em;
   line-height: 1.5em;
   position: relative;
   top: 0;
@@ -331,12 +370,12 @@ table.TitlesContent_Content {
 }
 .LinkedDocsTabsDiv{
   clear: both;
-  padding: .25em;
+  padding: @0p25em;
 }
 div.LinkedDocsTabsNodirittoDiv {
   text-align: left;
   border-top: 2px solid @color-1A;
-  margin-top: 0.75em;
+  margin-top: @0p75em;
   text-align: center;
   span.LinkedDocsTabsNodirittoSpan {
     color: @color-1A;
@@ -346,7 +385,7 @@ div.LinkedDocsTabsNodirittoDiv {
     margin-top: -1em;
     position: relative;
     top: -1em;
-    padding: 0.5em;
+    padding: @0p5em;
   }
   div {
     text-align: left;
@@ -355,7 +394,7 @@ div.LinkedDocsTabsNodirittoDiv {
 
 .egaf-linkedDocsValue {
 	white-space: nowrap;
-	padding: 0.25em 0.125em;
+	padding: @0p25em @0p125em;
   * {
     font-size: initial !important;
   }
@@ -364,9 +403,13 @@ div.LinkedDocsTabsNodirittoDiv {
     img.icon {
       height: 0.9em;
       width: auto;
-      margin-right: 0.25em;
+      margin-right: @0p25em;
       border:0;
     }
+	strong.visitedDocs {
+		font-size: @0p75em !important;
+		padding-right: @0p25em;
+	}
   }
 }
 
@@ -430,14 +473,28 @@ td.centrato {
   border: 1px solid @color-1A;
   display: table;
   float: left;
-  padding: .25em;
+  padding: @0p25em;
   background-color: @color-1D;
-  margin-right: .5em;
-  margin-bottom: .5em;
+  margin-right: @0p5em;
+  margin-bottom: @0p5em;
   cursor: pointer;
   min-width: 1.25em;
   text-align: center;
 }
 #infoadr{
 	padding: 5px; 
+}
+
+p.isbn_issn {
+	margin: @0p5em 0;
+	text-align: center;
+	background-color: @color-1A;
+	color: white;
+	line-height: 1.5em;
+	cursor: pointer;
+	strong {
+		position: static;
+		font-size: 1em;
+		color: white;
+	}
 }

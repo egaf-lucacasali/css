@@ -6,31 +6,41 @@
   }
 }
 
-.windowheightstep(catalogo,dottrina,      @wch-r1);
-.windowheightstep(catalogo,normativa,     @wch-r1);
-.windowheightstep(catalogo,prassi,        @wch-r1);
-.windowheightstep(catalogo,giurisprudenza,@wch-r1);
-.windowheightstep(catalogo,bibliografia,  @wch-r1);
-.windowheightstep(catalogo,notizie,       @wch-r1);
-.windowheightstep(catalogo,quesiti,       @wch-r1);
-.windowheightstep(catalogo,aggiornamenti, @wh-r1);
+.windowheightstep(catalogo,inpratica,      @wch-r1);
+.windowheightstep(catalogo,normativa,      @wch-r1);
+.windowheightstep(catalogo,prassi,         @wch-r1);
+.windowheightstep(catalogo,giurisprudenza, @wch-r1);
+.windowheightstep(catalogo,bibliografia,   @wch-r1);
+.windowheightstep(catalogo,notizie,        @wch-r1);
+.windowheightstep(catalogo,quesiti,        @wch-r1);
+.windowheightstep(catalogo,aggiornamenti,  @wh-r1);
 
-.windowheightstep(home,dottrina,      @wh-r2);
-.windowheightstep(home,normativa,     @wh-r2);
-.windowheightstep(home,prassi,        @wh-r2);
-.windowheightstep(home,giurisprudenza,@wch-r2);
-.windowheightstep(home,bibliografia,  @wh-r2);
-.windowheightstep(home,notizie,       @wh-r2);
-.windowheightstep(home,quesiti,       @wh-r2);
+.windowheightstep(home,dtt,                @wh-r2);
+.windowheightstep(home,dekra,              @wh-r2);
+.windowheightstep(home,promac,             @wh-r2);
 
+.windowheightstep(home,inpratica,          @wh-r2);
+.windowheightstep(home,normativa,          @wh-r2);
+.windowheightstep(home,prassi,             @wh-r2);
+.windowheightstep(home,giurisprudenza,     @wch-r2);
+.windowheightstep(home,bibliografia,       @wh-r2);
+.windowheightstep(home,notizie,            @wh-r2);
+.windowheightstep(home,quesiti,            @wh-r2);
 
-@media only screen and (min-width: 1280px) {
-  //.windowheightstep(catalogo,prassi,        @wh-r1);
-}
-@media only screen and (max-width: 1023px) {
-  .article.book.step3 {
-		display: none;
+#EgafTVQuesitiHolder .window.home {
+	&.quesiti {
+		max-height: 423.25em;
+		overflow: hidden;
 	}
+	&.notizie {
+		max-height: 63.25em;
+		overflow: hidden;
+	}
+}
+//@media only screen and (min-width: 1280px) {
+  //.windowheightstep(catalogo,prassi,        @wh-r1);
+//}
+//@media only screen and (max-width: 1023px) {
   //.windowheightstep(catalogo,dottrina,      @wh-r3);
   //.windowheightstep(catalogo,normativa,     @wh-r2);
   //.windowheightstep(catalogo,giurisprudenza,@wh-r3);
@@ -38,7 +48,7 @@
   //.windowheightstep(home,normativa,     @wh-r2);
   //.windowheightstep(home,prassi,        @wh-r2);
   //.windowheightstep(home,quesiti,       @wh-r2);
-}
+//}
 @media only screen and (max-width: 739px) {
 	.bordered-title {
 		.see-all {
@@ -57,13 +67,10 @@
 	  height: 150px;
 	}
 }
-@media only screen and (max-width: 479px) {
-  .article.book.step2{
-		display: none;
-	}
+//@media only screen and (max-width: 479px) {
   //.windowheightstep(catalogo,normativa,     @wh-r2);
   //.windowheightstep(catalogo,quesiti,       @wh-r2);
-}
+//}
 
 @media only screen and (min-width: 1024px) {
 	// desktop
@@ -89,7 +96,7 @@
 		bottom: auto;
 		height: auto;
 		background-color: transparent;
-		padding: .125em;
+		padding: @0p125em;
 		border: 0;
 	}
 }

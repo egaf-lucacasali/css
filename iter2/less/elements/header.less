@@ -3,7 +3,7 @@
 }
 
 #f-iter-menu-sub {
-	padding: .75em;
+	padding: @0p75em;
 }
 
 .mobile-header  {
@@ -45,14 +45,14 @@
 	.social {
 		a {
 			position: inherit !important;
-			padding-top: .25em !important;
+			padding-top: @0p25em !important;
 			height: 32px;
 		}
 	}
 
 	.uppercase {
 		li {
-			padding:.25em 0;
+			padding: @0p25em 0;
 		}
 	}
   
@@ -76,10 +76,10 @@
 		ul {
 			padding-bottom:0em;
 			b {
-				padding-left:.5em;
+				padding-left: @0p5em;
 			}
 			a {
-				padding:.125em 0;
+				padding: @0p125em 0;
 			}
 		}
 	}
@@ -151,11 +151,14 @@
 				.yol { // tecnica-veicoli
 					background-color: @egaf_t_u_75;
 				}
+				.hol { // it
+					background-color: @egaf_t_h_75;
+				}
 			}
 
 			&.m-no-blind {
 				b {
-					background-position: .5em center;
+					background-position: @0p5em center;
 					padding-left: 1.75em;
 				}
 			}
@@ -185,7 +188,7 @@
 					.transition(color 0.25s ease-in-out);
 					span {
 						font-weight: normal;
-						padding-right: .25em;
+						padding-right: @0p25em;
 						text-transform: capitalize;
 					}
 				}
@@ -276,7 +279,7 @@ div.main div.upper-menu table.social-user {
 
 		a {
 			display: block;
-			padding: .125em .25em;
+			padding: @0p125em @0p25em;
 			background-color: @color-1A;
 			text-transform: uppercase;
 			font-weight: bold;
@@ -299,6 +302,7 @@ div.main div.upper-menu table.social-user {
 			.set-menu-tematica-button(egaf_t_2_,   @egaf_t_2_100, @egaf_t_2_75);
 			.set-menu-tematica-button(egaf_t_1_,   @egaf_t_1_100, @egaf_t_1_75);
 			.set-menu-tematica-button(egaf_t_p_,   @egaf_t_p_100, @egaf_t_p_75);
+			.set-menu-tematica-button(egaf_t_h_,   @egaf_t_h_100, @egaf_t_h_75);
 		}
 	}
 }
@@ -469,6 +473,15 @@ div.main div.upper-menu table.social-user {
 		}
 		background-color: @egaf_t_u_25;
 	}
+	&.hol { // it
+		&.selected {
+			background-color: @egaf_t_h_100;
+		}
+		&:hover {
+			background-color: @egaf_t_h_75;
+		}
+		background-color: @egaf_t_h_25;
+	}
 }
 
 .apply {
@@ -476,7 +489,7 @@ div.main div.upper-menu table.social-user {
 	cursor: pointer;
 	.font-bold (@color-1C, 1em, none);
 	background-color: darken(@color-1A, 5%);
-	padding: .25em .5em;
+	padding: @0p25em @0p5em;
 
 	.transition(color 0.25s ease-out, background-color 0.25s ease-out;);
 	
@@ -502,7 +515,7 @@ div.nav {
 		height: 1.5em;
 	}
 	.logo {
-		padding:1em 0 .5em 0;
+		padding:1em 0 @0p5em 0;
 	}
 
 	.table {
@@ -517,11 +530,10 @@ div.nav {
 
 		li {
 			
-			@padding:.25em;
 			border-left:1px solid darken(@color-1A, 10%);
 			text-align: center;
 			margin:0;
-			padding:.25em;
+			padding: @0p25em;
 			overflow: visible;
 			position: static;
 
@@ -541,7 +553,7 @@ div.nav {
 			}
 			label {
 				
-				padding: @padding;
+				padding: @0p25em;
 				display: block;
 				vertical-align: middle;
 				input {
@@ -551,7 +563,7 @@ div.nav {
 					width:100%;
 					border:none;
 					height: 1.75em;
-					padding:.25em;
+					padding: @0p25em;
 					background-color: transparent;
 					
 				}
@@ -594,7 +606,7 @@ div.servizi{
 			border-left:1px solid @color-1A;
 			text-align: center;
 			margin:0;
-			padding:.125em;
+			padding:@0p125em;
 			overflow: visible;
 			position: static;
 
@@ -677,7 +689,7 @@ div.servizi{
 }
 
 .apply-wrapper {
-	padding:.375em .375em .375em;
+	padding: @0p375em @0p375em @0p375em;
 	text-align: right;
 	.wrap;
 	height: @iter-icon-size;
@@ -688,7 +700,7 @@ div.servizi{
 }
 
 .apply-box {
-	padding:.5em .5em;
+	padding:  @0p5em  @0p5em;
 	display: inline-block;
 	vertical-align: middle;
 	background-color: @color-1A;

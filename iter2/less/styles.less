@@ -61,7 +61,7 @@ body {
 }
 
 
-//nuovo layout per compatiblità con app
+//nuovo layout per compatiblitï¿½ con app
 //https://simonerescio.it/2014/06/css-table-struttura-base-layout-tipica-app-mobile/
 //Vertical base layout
 html, body {
@@ -139,12 +139,12 @@ html, body {
 }
 .bottom-elm-icon img {
 	height: 2em;
-    padding: 0.25em;
+    padding: @0p25em;
 }
 .bottom-elm-icon p {
 	margin: 0;
 	padding: 0;
-    font-size: 0.75em;
+    font-size: @0p75em;
 }
 //disattivo la barra dei pulsanti
 #bottom-bar {
@@ -196,6 +196,10 @@ div#dataHolder {
 	}
 }
 
+.embeded-free-search{
+	padding-bottom: 0 !important;
+}
+
 .search {
 	text-align: left !important;
 	//padding-left:1em !important;
@@ -208,7 +212,7 @@ div#dataHolder {
 	color:white;
 	border:none;
 	padding-bottom: 6px;
-	margin-left:.5em;
+	margin-left: @0p5em;
 }
 
 
@@ -246,8 +250,8 @@ a {
 
 div#appBody.appBody > .row > .columns {
 	//.debug;
-	padding-left: .5em;
-	padding-right: .5em;
+	padding-left: @0p5em;
+	padding-right: @0p5em;
 }
 
 // Foundation overrides
@@ -304,7 +308,7 @@ div#top-bar {
 	}
 	
 	.search {
-		margin-top: 0.25em;
+		margin-top: @0p25em;
 		border: 1px solid #CCCCCC;
 		background-color: #CCCCCC;
 		width: 100%;
@@ -312,10 +316,10 @@ div#top-bar {
 		
 		td {
 			background-color: #CCCCCC;
-			padding-top: 0.25em;
+			padding-top: @0p25em;
 			padding-bottom: 0;
-			padding-left: 0.25em;
-			padding-right: 0.25em;
+			padding-left: @0p25em;
+			padding-right: @0p25em;
 		}
 		
 		input {
@@ -332,13 +336,13 @@ div#top-bar {
 			img {
 				height: auto;
 				width: 1em;
-				margin-top: 0.25em;
+				margin-top: @0p25em;
 			}
 		}
 		
 		div#vol-search-msg {
 			font-weight: normal;
-			padding: 0.25em;
+			padding: @0p25em;
 			display: none;
 			
 			strong {
@@ -368,8 +372,8 @@ background-repeat:repeat-y;
 //.h-full-gradient (fade(@color-1C,0%), @color-1C, 0%, 100%);
 	
 	td {
-		padding-left:.25em;
-		padding-right:.25em;
+		padding-left: @0p25em;
+		padding-right: @0p25em;
 	}
 	.user {
 		color:white;
@@ -385,7 +389,7 @@ background-repeat:repeat-y;
 			
 		}
 		a {
-			padding:.5em .5em 0 .5em;
+			padding: @0p5em @0p5em 0 @0p5em;
 
 		}
 	}
@@ -394,7 +398,7 @@ background-repeat:repeat-y;
 		//
 		padding: 0;
 		> a {
-			padding-top: .25em !important;
+			padding-top: @0p25em !important;
 			display: inline-block;
 		}
 	}
@@ -406,7 +410,7 @@ background-repeat:repeat-y;
 		}
 		img {
 			position: relative;
-			padding-left:.25em;
+			padding-left: @0p25em;
 			top: 2px;
 		}
 	}
@@ -476,6 +480,9 @@ div#msg {
   .divbutton{
     width:100%;
     text-align:center;
+    &.right {
+      text-align: right;
+    }
   }
   
   .titleMSG {
@@ -630,75 +637,25 @@ a {
 			font-size: @font-default;
 			border-left:@border solid white;
 			border-bottom:@border solid white;
-			padding: .125em;
+			padding: @0p125em;
 			display: block;
 			color:white;
 		}
 	}
 }
 
-.window {
-	.article.book {
-		padding-left:.75em;
-		padding-right:.75em;
-
-		.book-preview {
-			margin:auto;
-			margin-bottom:1em;
-			line-height: 0;
-			text-align: center;
-		}
-
-		.cart-btn {
-			display: block;
-			width:100%;
-			.wrap;
-			background-image: url("img/cart.png");
-			background-position: .25em center;
-			background-repeat: no-repeat;
-			padding:1em;
-			padding-left:4em;
-		}
-
-		span {
-			display: block;
-			background-color: @color-1D !important;
-			color: @color-1A;
-			padding: .25em .5em;
-			margin-top:.5em;
-			font-size: 1em;
-			max-height: inherit !important;
-		}
-
-		p {
-			font-size: 1em;
-			margin-top: .5em;
-      max-height: inherit !important;
-      padding-bottom: 0.1em;
-		}
-	}
-}
-
-h1 {
-	
-}
-.book-title {
-	min-height: auto;
-	font-size: .75em;
-}
 .cart-btn {
-	@padding:.5em;
 	
 	color:white;
 	text-transform: uppercase;
 	text-decoration: none;
 	font-weight: bold;
 	display: inline-block;
-	font-size: .75em;
+	font-size: @0p75em;
 
 	background-color: @color-1A;
 
-	padding: .5em;
+	padding: @0p5em;
 	&:hover {
 		color:white;
 		background-color: lighten(@color-1A,10%);
@@ -711,11 +668,11 @@ h1 {
 		display: table-cell;
 		vertical-align: middle;
 		&:first-child {
-			padding: 0 (@padding/2) 0 @padding;
+			padding: 0 @0p25em 0 @0p5em;
 		}
 
 		&:last-child {
-			padding: 0 (@padding/2) 0 0;
+			padding: 0 @0p25em 0 0;
 		}
 	}
 }
@@ -733,11 +690,6 @@ h1 {
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
-}
-
-.books .article {
-	.wrp;
-	padding:.5em;
 }
 
 .article-btn {
@@ -811,6 +763,9 @@ h1 {
 		&.image_3 div {
 		  background-color: @egaf_t_3_100;
 		}
+		&.image_h div {
+		  background-color: @egaf_t_h_100;
+		}
 		
 	}
 }
@@ -834,7 +789,7 @@ h1 {
 		text-transform: uppercase;
 
 		> * {
-			padding-bottom:.5em !important;
+			padding-bottom: @0p5em !important;
 			display: inline-block;
 			h3, h4, h5, h6 {
 				overflow: hidden;
@@ -852,8 +807,8 @@ h1 {
 				display: inline-block;
 				text-decoration: none;
 				div {
-					font-size: .75em;
-					padding-left:.5em;
+					font-size: @0p75em;
+					padding-left: @0p5em;
 					display: inline-block;
 				}
 			}
@@ -861,7 +816,7 @@ h1 {
 	}
 
 	.article {
-		@margin:.5em;
+		@margin: @0p5em;
 		margin-top: 1em;
 		//margin-bottom: 1em;
 		//padding:1em 2em;
@@ -881,7 +836,7 @@ h1 {
 		}
 		span {
 			margin-top: @margin;
-			margin-bottom:.5em;
+			margin-bottom: @0p5em;
 			clear:both;
 			display: block;
       line-height: 1.1em;
@@ -911,11 +866,9 @@ h1 {
 }
 .boxnews.article{
   height: 9em;
+  word-break: break-word;
   &.giurisprudenza {
     height: 5.25em;
-  }
-  &.quesito {
-    //height: auto !important;
   }
   &.egaftv {
     height: (@whtv-rn - 1em);
@@ -923,7 +876,7 @@ h1 {
       width: 1.5em;
       height: 1em;
       float: left;
-      margin-right: 0.25em;
+      margin-right: @0p25em;
     }
     strong {
       max-height: 2.2em;
@@ -938,19 +891,7 @@ h1 {
   }
 }
 
-.book-title {
-  max-height: inherit !important;
-}
 
-
-.books {
-	.article {
-		padding-bottom:1em;
-		a {
-			display: inline-block;
-		}
-	}
-}
 
 
 
@@ -970,7 +911,7 @@ h1 {
 }
 
 tr.t-row div.icon {
-	margin-bottom: 0.5em;
+	margin-bottom: @0p5em;
 }
 
 .main-image {
@@ -990,7 +931,7 @@ tr.t-row div.icon {
 }
 
 .bottom-padded {
-	padding-bottom:.25em;
+	padding-bottom: @0p25em;
 }
 
 .f-right {
@@ -1002,11 +943,11 @@ tr.t-row div.icon {
 }
 
 .left-margin {
-	margin-left:.5em;
+	margin-left: @0p5em;
 }
 
 .top-margin {
-	margin-top:.5em;
+	margin-top: @0p5em;
 }
 
 .text-light {
@@ -1027,13 +968,13 @@ tr.t-row div.icon {
 		//background-color: @color-1A;
 		.font-normal (white, @font-default, uppercase);
     &.send-span {
-      margin-left: 0.5em;
+      margin-left: @0p5em;
     }
 	}
 
 	b {
 		display: inline-block;
-		padding:@main-padding/2 @main-padding @main-padding/2 @basePadding;
+		padding: (@main-padding/2) @main-padding (@main-padding/2) @basePadding;
 		color:white;
 		background-color: @color-1A;
 		.font-bold (white, @font-default, uppercase);
@@ -1041,7 +982,7 @@ tr.t-row div.icon {
   
 	.see-all {
 		padding-right:@basePadding;
-		padding-top: .25em;
+		padding-top: @0p25em;
 		div {
 			display: inline-block;
 			font-weight: bold;
@@ -1050,7 +991,7 @@ tr.t-row div.icon {
 		img {
 			position: relative;
 			top:2px;
-			margin-left: .5em;
+			margin-left: @0p5em;
 		}
 		display: inline-block;
 		float: right;
@@ -1060,13 +1001,37 @@ tr.t-row div.icon {
     display: inline-block;
     font-weight: bold;
     text-transform: uppercase;
-    padding-top: .25em;
+    padding-top: @0p25em;
     display: inline-block;
   }
   
 }
 
-
+.window.prontuario {
+	.page_tit {
+		margin-left: 1em;
+		margin-right: 1em;
+	
+	strong {
+		color: #5f574f;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+	}
+   input {
+	width: 15em;
+	max-width: 100% !important;
+  }
+   ol {
+	margin-left: 1em;
+  }
+   ul {
+	margin-left: 1em;
+  }
+}
+  .window.services.ebook .bordered-title b {
+	text-transform: none;
+  }
 
 
 .mobile-menu-sprite(@step) {
@@ -1144,7 +1109,7 @@ tr.t-row div.icon {
 div.window.services div.col-3 {
   div.services {
     img.services {
-      padding-top: 0.25em;
+      padding-top: @0p25em;
     }
     &.relative {
       width: 100%;
@@ -1184,14 +1149,14 @@ div.window.services div.col-3 {
       float: right;
       background-color: white;
       padding-right: 1em;
-      padding-top: 0.5em;
+      padding-top: @0p5em;
       text-align: right;
       
       a {
         font-size: @font-services;
         font-weight: bold;
         border: 1px solid @color-1A;
-        padding: .25em;
+        padding: @0p25em;
         background-color: @color-1A;
         color: white;
         
@@ -1273,7 +1238,7 @@ div.window.services div.col-3 {
 #DEBUG_WARINIG, #DEBUG_WARNING {
 	background-color: #FFF8C2;
 	font-weight: bold;
-	padding: .5em;
+	padding: @0p5em;
 	position: fixed !important;
 }
 

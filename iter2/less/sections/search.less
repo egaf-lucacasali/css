@@ -47,7 +47,7 @@ label {
 	.font-set;
 	
 	li {
-		a {
+		> a {
 			display: block;
 			text-align: center;
 			padding-left:@basePadding;
@@ -140,15 +140,14 @@ label {
 	}
 }
 strong.SearchEdit{
-	top: .5em;
+	top: @0p5em;
 }
 span.SearchEdit{
 	float:right;
 	font-size:2em;
 }
 
-.treeviewFirstLevel,
-.search-letter {
+.treeviewFirstLevel {
 	padding:@basePadding 0 0 0;
 	li {
 		@margin:@basePadding;
@@ -157,7 +156,7 @@ span.SearchEdit{
 		div {
 			@size:45px;
 			display:inline-block;
-			padding:.125em;
+			padding:@0p125em;
 			.wrap;
 
 			.font-bold (@color-1A, 1.5em, none);
@@ -189,15 +188,24 @@ span.SearchEdit{
 			.transition(background-color 0.25s ease-out, border-color 0.25s ease-out;);
 
 			span {
-				font-size: .625em;
+				font-size: escape('.625em');
 				font-weight: normal;
 			}
 		}
+	}
+	div.br {
+		display: none !important;
 	}
 }
 
 .search-tags {
 	margin-top:@main-padding;
+	p.ButtonPrivati {
+		margin-bottom: @0p5em;
+		label {
+			white-space: normal;
+		}
+	}
 }
 
 .search-tag-button() {
@@ -265,7 +273,7 @@ span.SearchEdit{
 .search-submit_del, 
 .search-submit_go {
   float: none;
-  margin-right: 0.25em;
+  margin-right: @0p25em;
 }
 .search-submit_go{
 	background-color: @color-1A;
@@ -279,7 +287,7 @@ span.SearchEdit{
 	margin-top: 0 !important;
 	background-image: url('img/search-gradient-bg.png');
 	.h-full-gradient (@color-1B, fade(@color-1B,0%), 0%, 100%);
-	padding:.25em;
+	padding: @0p25em;
 	color:white !important;
 }
 
@@ -291,7 +299,7 @@ span.SearchEdit{
 
 .search-date {
 	background-color:@color-1C;
-	padding:@main-padding/1.5;
+	padding: (@main-padding/1.5);
 	color:white;
 	padding-right:1em;
 	display: inline-block;
@@ -307,7 +315,8 @@ div.EFG_6>div>div>span,
 div.EFG_7>div>div>span,
 div.EFG_8>div>div>span,
 div.EFG_9>div>div>span,
-div.EFG_10>div>div>span{
+div.EFG_10>div>div>span,
+div.EFG_11>div>div>span{
 	position: absolute;
 }
 
@@ -316,6 +325,9 @@ div.EFG_10>div>div>span{
 		@size:40px;
 		width:@size;
 		height:@size;
+	}
+	.egaf_dtt {
+		font-size: 0.78em;
 	}
 	tr {
 		&.tr-odd,
@@ -385,8 +397,8 @@ div.EFG_10>div>div>span{
 		
 		div {
 		    float: left;
-		    margin-top: 0.25em;
-		    margin-left: 0.5em;
+		    margin-top: @0p25em;
+		    margin-left: @0p5em;
 		}
 	}
 	
@@ -410,13 +422,13 @@ div.EFG_10>div>div>span{
 
 .TitlesContent_NavigazioneTop,
 .TitlesContent_NavigazioneBottom {
-	padding:.5em;
+	padding: @0p5em;
 	background-color: @color-1D;
-	margin: .5em 0;
+	margin: @0p5em 0;
 	overflow: auto;
 	td {
 		color:@color-1A;
-		padding:.125em;
+		padding: @0p125em;
 		vertical-align: middle;
 		height: 24px;
 		img {
@@ -433,6 +445,14 @@ div.EFG_10>div>div>span{
 	}
 }
 
+div.icon.visitedDocs {
+	position: relative;
+	strong.visitedDocs {
+		position: absolute;
+		left: 18px;
+		top: 17px;
+	}
+}
 .egaf_pnc,
 .search-header .TitlesContent_NavigazioneTop strong {
 	font-size: 1em !important;
@@ -442,19 +462,22 @@ div.EFG_10>div>div>span{
 .search-month {
 	color:@color-1A;
 	display: inline-block;
-	margin-right: .75em;
+	margin-right: @0p75em;
 	td {
-		padding:.25em .5em 0 0;
+		padding: @0p25em @0p5em 0 0;
 	}
 }
 
 a.buttonStyle {
   display: inline-block;
-  padding:.375em .75em;
+  padding: @0p375em @0p75em;
   background-color: @color-1D;
 	color: @color-1A;
   border:2px solid transparent;
   font-weight: bold;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
   &:hover {
     background-color: @color-1C;
     cursor: pointer;
@@ -470,6 +493,11 @@ a.buttonStyle {
       background-color: @color-1D;
       cursor: inherit;
     }
+  }
+  &.buttonD {
+	font-size: 0.75em;
+	font-weight: normal !important;
+	text-decoration: none !important;
   }
 }
 
@@ -519,12 +547,12 @@ a.buttonStyle {
 	
 	ul {
 		background-color: @color-1D;
-		padding:.5em;
+		padding: @0p5em;
 		li {
       span.highlight {
         font-size: 1em;
       }
-			padding:.25em;
+			padding: @0p25em;
 			list-style-type: none;
 			&:nth-child(even) {
 				background-color: @color-1D;
@@ -552,10 +580,10 @@ a.buttonStyle {
 	top: auto !important;
 }
 .to_much_results_msg{
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: 0.25em;
-    margin-right: 0.25em;
+    margin-top: @0p5em;
+    margin-bottom: @0p5em;
+    margin-left: @0p25em;
+    margin-right: @0p25em;
     color: @color-1A;
     font-style: italic;
 }
@@ -578,8 +606,8 @@ table.egaf_comboPlus {
 }
 
 .artHelp{
-	padding-left:.5em;
-	padding-right:.5em;
+	padding-left:@0p5em;
+	padding-right:@0p5em;
 	background-color: @color-1A;
 	color:white;
   &:hover{
