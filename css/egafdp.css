@@ -1,0 +1,162 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+hgroup,
+menu,
+footer,
+header,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+a img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.egafd_tipo {
+  margin-left: 0 !important;
+}
+.bigdiv a *,
+.egafd_blackbox a * {
+  text-decoration: none !important;
+  color: #000000 !important;
+  white-space: normal !important;
+}
+.bigdiv,
+.egafd_blackbox,
+.egafd_noteTypeBase,
+.egafd_noteTypeBasedraftPrint,
+.egafd_adrimg {
+  border: 0 !important;
+  border-bottom: 2px solid #b2aaa1 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.egafd_blackbox,
+.egafd_noteTypeBase,
+.egafd_noteTypeBasedraftPrint,
+.egafd_adrimg {
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
+}
+.egafd_container {
+  padding: 0.25em !important;
+  border: 0 !important;
+  border-right: 2px solid #000000 !important;
+  border-left: 2px solid #000000 !important;
+}
+#noteTypeBasedraftPre {
+  display: none !important;
+}
+#noteTypeBasedraft {
+  position: static !important;
+  max-height: none !important;
+  display: block !important;
+}
+.egafd_noteTypeBasedraftPrint {
+  display: none !important;
+}
+.egafd_adrtd1 {
+  width: 100%;
+}
+.egafd_adrtd2 {
+  display: none;
+}
+.egafd_aggiornatoal {
+  float: right;
+  font-size: 0.75em;
+  text-transform: none;
+}
+/*pagina titoli*/
+.bordered-title b {
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.TitlesContent_NavigazioneTop,
+.TitlesContent_NavigazioneBottom {
+  display: none;
+}
+.egaf_rownum {
+  min-width: 2em;
+  vertical-align: top;
+  font-size: 1.5em;
+  text-align: center;
+}
+table.TitlesContent_Content {
+  border-collapse: collapse !important;
+  width: 100%;
+}
+table.TitlesContent_Content tr {
+  border-bottom: 1px solid #000 !important;
+}
+table {
+  page-break-inside: auto;
+}
+tr {
+  page-break-inside: avoid;
+  page-break-after: auto;
+}
+/*23/02/2023 14:59:09,22*/

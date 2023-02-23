@@ -1,0 +1,312 @@
+.egafd_titolo {
+  clear: both;
+  font-weight: bold;
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+}
+.egafd_titolo h1 {
+  font-size: 1.25em;
+}
+.egafd_sottotitolo {
+  font-weight: bold;
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  font-size: 1.25em;
+}
+.egafd_parole {
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+}
+.egafd_lbl {
+  margin: 0.75em 0;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  display: inline-block;
+  margin-bottom: 0.25em;
+  background-color: #b2aaa1;
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.egafd_tbl {
+  background-color: #ddd8d2;
+  padding: 0.5em;
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  color: #5f574f;
+  font-size: 1em;
+  text-transform: none;
+}
+.egafd_tbl span {
+  color: black;
+  font-weight: normal;
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  font-size: 1em;
+  padding-left: 0.25em;
+}
+.egafd_storico,
+.egafd_riservato {
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  display: inline-block;
+  margin-bottom: 0.25em;
+  background-color: #b2aaa1;
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-right: 0.5em;
+}
+.egafd_storico {
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-image: url("img/doc-nonvigente.png");
+}
+.egafd_riservato {
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-image: url("img/doc-riservato.png");
+  background-color: black;
+}
+.egafd_storico,
+.egafd_riservato {
+  padding-left: 2em;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+.egafd_storico.red,
+.egafd_riservato.red {
+  color: #5f574f;
+  background-color: #ddd8d2;
+}
+.egafd_tipo {
+  display: inline-block;
+  padding: 0.25em 0.5em 0.25em 0.75em;
+  margin-left: -0.75em;
+  background-color: #5f574f;
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+.egafd_tipodoc {
+  clear: both;
+}
+.egafd_tipo + .egafd_aggiornatoal {
+  margin-left: -0.75em;
+}
+.egafd_aggiornatoal {
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  display: inline-block;
+  margin-bottom: 0.25em;
+  background-color: #b2aaa1;
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.egafd_riferim,
+.egafd_autore {
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+}
+.egafd_riferim ul,
+.egafd_autore ul {
+  list-style-position: inherit !important;
+  margin-left: 1em;
+}
+.egafd_riferim a {
+  white-space: inherit;
+}
+.egafd_riferim li,
+.egafd_riferim p {
+  font-size: .8em;
+}
+.egafd_autore li,
+.egafd_autore p {
+  font-size: 1em;
+}
+.egafd_autore_nota {
+  color: #5f574f;
+  font-size: .75em;
+}
+div#noteTypeBasedraftPre {
+  font-size: 0;
+}
+.egafd_noteTypeBase {
+  padding-bottom: 1em;
+}
+.egafd_noteTypeBasedraft {
+  font-size: initial !important;
+}
+.egafd_noteTypeBasedraft p {
+  font-size: initial !important;
+  min-height: 1em;
+}
+.egafd_noteTypeBasedraft b {
+  color: white;
+  text-transform: uppercase;
+  background-color: #5f574f;
+  margin-left: -0.125em;
+  padding: .125em;
+  padding-bottom: 0;
+}
+.egafd_titolo,
+.egafd_ipotesi,
+.egafd_noteTypeBasedraft {
+  text-transform: none;
+  padding: 0 .25em;
+}
+.egafd_pre-line {
+  white-space: pre-line;
+}
+.egafd_tbl-viol {
+  width: 100%;
+}
+.egafd_tbl-viol,
+.egafd_tbl-bib {
+  border-collapse: collapse;
+}
+.egafd_tbl-viol td,
+.egafd_tbl-bib td {
+  padding: 2px 4px !important;
+  border: 1px solid #5f574f !important;
+  vertical-align: top;
+}
+.egafd_tbl-viol td.td2,
+.egafd_tbl-bib td.td2 {
+  font-weight: bold;
+}
+.bigdiv table {
+  border-collapse: collapse;
+}
+.bigdiv td {
+  padding: 2px 4px !important;
+  border: 1px solid #5f574f !important;
+}
+.egafd_blackbox {
+  border: 1px solid black;
+  padding: 0 .5em;
+}
+.bigdiv a *,
+.egafd_blackbox a * {
+  color: #898076 !important;
+  white-space: normal;
+}
+.egafd_noteTypeBasedraftPrint {
+  display: none;
+}
+.egafd_adrtd1 {
+  float: left;
+  width: 58%;
+}
+.egafd_materiaadr .bigdiv table,
+.egafd_adrtd1 .bigdiv table,
+.egafd_materiaadr .bigdiv td,
+.egafd_adrtd1 .bigdiv td {
+  border: 0 !important;
+}
+.egafd_adrtd2 {
+  float: right;
+  width: 41%;
+  overflow: visible;
+  border: 1px solid #5f574f;
+}
+.egafd_opere span {
+  padding-right: .5em;
+}
+.egafd_opere img {
+  width: auto;
+}
+.egafd_onlyprint {
+  display: none;
+}
+.egafd_needlogin,
+.egafd_complanagr,
+.egafd_needbuy {
+  white-space: normal !important;
+}
+.egafd_camsg a {
+  white-space: normal;
+}
+.egafd_camsg .titleMSG {
+  color: #5f574f;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1em;
+}
+.egafd_container.egafd_lcpsmsg {
+  padding-top: 2em;
+}
+.egafd_container.egafd_lcpsmsg .divbutton {
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+}
+.egafd_container.egafd_lcpsmsg a {
+  white-space: normal;
+}
+.egafd_container.egafd_lcpsmsg .titleMSG {
+  color: #5f574f;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.egafd_modulo_nota {
+  color: #5f574f;
+  font-size: .875em;
+}
+.egafd_modulo_testo b {
+  text-decoration: underline;
+}
+.egafd_modulo_privacy a {
+  white-space: initial;
+  text-decoration: underline;
+}
+.egafd_violazioni .egafd_violnorma div.egafd_txt {
+  padding: .25em .5em .25em .5em;
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+}
+.egafd_violazioni table.egafd_sanzioni {
+  margin-top: .75em;
+  border-collapse: collapse;
+}
+.egafd_violazioni table.egafd_sanzioni td {
+  padding: .25em .5em .25em .5em;
+  border: 1px solid black !important;
+  border-collapse: collapse;
+  vertical-align: top;
+}
+.egafd_violazioni table.egafd_sanzioni td span {
+  font-weight: lighter;
+  white-space: nowrap;
+}
+.egafd_violazioni table.egafd_sanzioni td.egafd_s-tit {
+  padding: 0 !important;
+}
+.egafd_violazioni table.egafd_sanzioni td.egafd_s-c1 {
+  width: 3em;
+  text-align: right;
+}
+.egafd_violazioni table.egafd_sanzioni td.egafd_sa-c2 {
+  width: 3em;
+}
+.egafd_violazioni table.egafd_sanzioni td.black {
+  padding: .25em .5em .25em .5em;
+}
+.egafd_violazioni table.egafd_sanzioni td.white {
+  font-weight: normal;
+}
+.egafd_violazioni table.egafd_sanzioni td.bold {
+  font-weight: bold;
+}
+.egafd_violazioni table.egafd_sanzioni div.egafd_lbl {
+  display: block;
+  margin: 0;
+}
+/*23/02/2023 14:59:09,23*/
