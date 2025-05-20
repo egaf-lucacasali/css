@@ -64,10 +64,10 @@
 			&:last-child {
 				padding-bottom:0em;
 			}
-      &.subservizi {
-        padding-left: 1em;
-        padding-bottom: 0 !important;
-      }
+			&.subservizi {
+				padding-left: 1em;
+				padding-bottom: 0 !important;
+			}
 		}
 	}
 
@@ -100,11 +100,14 @@
 			}
 			
 			&.selected {
-        * {
-        color: white;
-        }
+				* {
+				color: white;
+				}
 				b {
 					color: white;
+				}
+				.qol { // quesiti
+					background-color: @egaf_t_q_75;
 				}
 				.kol { // cds
 					background-color: @egaf_t_k_75;
@@ -131,6 +134,9 @@
 					background-color: @egaf_t_m_75;
 				}
 				.xol { // rifiuti
+					background-color: @egaf_t_x_75;
+				}
+				.ool { // rifiuti
 					background-color: @egaf_t_x_75;
 				}
 				.aol { // merci
@@ -321,11 +327,11 @@ div.main div.upper-menu table.social-user {
 .set-menu-tematica-button(@class, @backgroundColor, @backgroundColorHover) {
 	&.@{class}100 {
 		background-color: @backgroundColor;
-  }
-  &.@{class}100,&.@{class}25 {
+	}
+	&.@{class}100,&.@{class}25 {
 		&:hover {
 			background-color: @backgroundColorHover;
-      cursor: pointer;
+			cursor: pointer;
 		}
 	}
 }
@@ -338,6 +344,15 @@ div.main div.upper-menu table.social-user {
 	background-repeat: no-repeat;
 	background-size: contain;
 	
+	&.qol { // quesiti
+		&.selected {
+			background-color: @egaf_t_q_100;
+		}
+		&:hover {
+			background-color: @egaf_t_q_75;
+		}
+		background-color: @egaf_t_q_25;
+	}
 	&.kol { // cds
 		&.selected {
 			background-color: @egaf_t_k_100;
@@ -411,6 +426,15 @@ div.main div.upper-menu table.social-user {
 		background-color: @egaf_t_m_25;
 	}
 	&.xol { // rifiuti
+		&.selected {
+			background-color: @egaf_t_x_100;
+		}
+		&:hover {
+			background-color: @egaf_t_x_75;
+		}
+		background-color: @egaf_t_x_25;
+	}
+	&.ool { // rifiuti
 		&.selected {
 			background-color: @egaf_t_x_100;
 		}
